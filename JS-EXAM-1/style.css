@@ -1,0 +1,11 @@
+.calculator{
+    background-color: rgb(255, 255, 255);
+}
+
+#result{
+    color: rgb(0, 0, 0)
+}
+
+button{
+    font-size: 16px;
+}
