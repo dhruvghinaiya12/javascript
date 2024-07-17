@@ -44,10 +44,12 @@ const data = () => {
     let td5 = document.createElement("td");
     td5.innerHTML = users[i].experience;
     let td6 = document.createElement("td");
-    if (users[i].experience > 5) {
-      td6.innerHTML = "senior";
-    } else {
-      td6.innerHTML = "junior";
+    if(users[i].experience>0) {
+      if (users[i].experience > 5) {
+        td6.innerHTML = "senior";
+      } else {
+        td6.innerHTML = "junior";
+      }
     }
     let td7 = document.createElement("td");
     td7.innerHTML = users[i].salary;
