@@ -5,7 +5,6 @@ const handleDelete = (index) => {
   content();
 };
 
-
 const content = () => {
   document.getElementById("tbody").innerHTML = "";
   for (let i = 0; i < users.length; i++) {
@@ -22,7 +21,7 @@ const content = () => {
     td5.innerHTML = users[i].number;
     let td6 = document.createElement("td");
     td6.innerHTML = "delete";
-    td6.addEventListener("click",handleDelete)
+    td6.addEventListener("click", handleDelete);
     document.getElementById("tbody").append(tr);
     tr.append(td1, td2, td3, td4, td5, td6);
   }
@@ -32,13 +31,29 @@ const handleData = (e) => {
   e.preventDefault();
 
   let user = {
-    username: document.getElementById("Name").value,
-    grid: document.getElementById("grid").value,
-    course: document.getElementById("course").value,
-    fees: document.getElementById("fees").value,
-    number: document.getElementById("number").value,
+    username: document.getElementById("Name").value.trim(),
+    grid: document.getElementById("grid").value.trim(),
+    course: document.getElementById("course").value.trim(),
+    fees: document.getElementById("fees").value.trim(),
+    number: document.getElementById("number").value.trim(),
   };
-
+  if (user.username.length < 2) {
+    alert("Username should be at least 2 characters long");
+    return;
+  }
+  if (user.grid.length != 4) {
+    alert("Grid should be 4 digits long");
+    return;
+  }
+  if (
+    user.number.length != 10 ||
+    !["6", "7", "8", "9"].includes(user.number[0])
+  ) {
+    alert(
+      "Phone number should be at least 10 digits long and start with 6 or 7 8 or 9"
+    );
+    return;
+  }
   users.push(user);
   console.log(users);
   content();

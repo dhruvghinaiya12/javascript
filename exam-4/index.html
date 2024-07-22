@@ -23,10 +23,10 @@
         <option value="python developer">python developer</option>
       </select>
       <select id="fees">
-        <option value="95,000">95,000 </option>
-        <option value="85,000">85,000 </option>
-        <option value="85,000">85,000 </option>
-        <option value="90,000">90,000 </option>
+        <option value="95,000">95,000</option>
+        <option value="85,000">85,000</option>
+        <option value="85,000">85,000</option>
+        <option value="90,000">90,000</option>
       </select>
       <input type="number" id="number" placeholder="Number" />
       <input type="submit" value="Submit" id="submit" />
@@ -47,7 +47,18 @@
       </thead>
       <tbody id="tbody"></tbody>
     </table>
-
+    <table
+      class="table table-striped table-bordered border-5 table-hover w-50 mx-auto mt-5 text-center"
+    >
+      <thead>
+        <tr>
+          <th scope="col">course</th>
+          <th scope="col">count</th>
+          <th scope="col">total fees</th>
+        </tr>
+      </thead>
+      <tbody id="Summary"></tbody>
+    </table>
     <script src="./index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
