@@ -26,16 +26,15 @@ const content = () => {
     tr.append(td1, td2, td3, td4, td5, td6);
   }
 };
-
 const handleData = (e) => {
   e.preventDefault();
 
   let user = {
     username: document.getElementById("Name").value.trim(),
-    grid: document.getElementById("grid").value.trim(),
-    course: document.getElementById("course").value.trim(),
-    fees: document.getElementById("fees").value.trim(),
-    number: document.getElementById("number").value.trim(),
+    grid: document.getElementById("grid").value,
+    course: document.getElementById("course").value,
+    fees: document.getElementById("fees").value,
+    number: document.getElementById("number").value,
   };
   if (user.username.length < 2) {
     alert("Username should be at least 2 characters long");
