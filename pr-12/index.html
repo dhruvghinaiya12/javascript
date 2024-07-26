@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="userdata">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+        />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="Phone Number"
+        />
+
+        <fieldset class="gender-selection">
+          <legend>Choose your gender:</legend>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female" />
+          <label for="other">Other</label>
+          <input type="radio" name="gender" id="other" value="other" />
+        </fieldset>
+        <fieldset class="language-selection">
+          <legend>Choose Languages:</legend>
+          <label for="English">English</label>
+          <input type="checkbox" name="Language" id="English" value="English" />
+          <label for="Hindi">Hindi</label>
+          <input type="checkbox" name="Language" id="Hindi" value="Hindi" />
+          <label for="Gujarati">Gujarati</label>
+          <input
+            type="checkbox"
+            name="Language"
+            id="Gujarati"
+            value="Gujarati"
+          />
+        </fieldset>
+        <select name="age" id="age">
+          <option value="" disabled selected>Select your age group</option>
+          <option value="12-18">12-18</option>
+          <option value="19-25">19-25</option>
+          <option value="26-34">26-34</option>
+          <option value="35-45">35-45</option>
+        </select>
+
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <input type="submit" value="Sign Up" />
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
