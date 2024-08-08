@@ -23,7 +23,7 @@ const content = () => {
     let Row = document.createElement("tr");
     let Cell = document.createElement("td");
     let img = document.createElement("img");
-    img.src = "./img/wallhaven-j5q9q5.jpg"; 
+    img.src = "./img/thumb-1920-973945.jpg"; 
     img.classList.add("table-img");
     Cell.append(img);
     Row.append(Cell);
