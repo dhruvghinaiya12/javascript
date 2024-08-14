@@ -2,7 +2,7 @@ const time = document.getElementById("time");
 const ampm = document.getElementById("ampm");
 const dateElement = document.getElementById("date");
 
-function updateTimeAndDate() {
+function clock() {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -41,6 +41,6 @@ function updateTimeAndDate() {
   dateElement.innerHTML = `${weekDay}, ${dayOfMonth} ${month} ${year}`;
 }
 
-updateTimeAndDate();
+clock();
 
-setInterval(updateTimeAndDate, 1000);
+setInterval(clock, 1000);
