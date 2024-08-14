@@ -2,51 +2,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #282c34; 
-    color: #61dafb; /* Light blue color */
+    background: url(./img/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
-}
-
-/* Style the clock container */
-.clock {
+  }
+  
+  .clock {
     text-align: center;
-    background: #1e1e1e; /* Slightly lighter background for the clock */
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
-
-/* Container for time and AM/PM */
-#time-container {
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.5), 
+              0 0 10px rgba(255, 99, 71, 0.4), 
+              0 0 15px rgba(255, 235, 59, 0.5), 
+              0 0 20px rgba(97, 218, 251, 0.4), 
+              0 0 25px rgba(255, 99, 71, 0.5), 
+              0 0 30px rgba(255, 235, 59, 0.4),
+              0 0 35px rgba(97, 218, 251, 0.5),
+              0 0 40px rgba(255, 99, 71, 0.4);
+  }
+  
+  #time-container {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-}
-
-/* Style the time */
-#time {
+  }
+  
+  #time {
     font-size: 80px;
     font-weight: bold;
-    margin-right: 10px; /* Space between time and AM/PM */
-}
-
-/* Style the AM/PM indicator */
-#ampm {
+    margin-right: 10px;
+    background: linear-gradient(45deg, #61dafb, #ff6347, #ffeb3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #ampm {
     font-size: 40px;
     font-weight: bold;
-    color: #fff;
-    margin-top: 10px; /* Align AM/PM to be at the same height as the time */
-}
-
-/* Style the date */
-#date {
-    font-size: 24px;
+    background: linear-gradient(45deg, #61dafb, #ff6347, #ffeb3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-top: 10px;
-}
+  }
+  
+  #date {
+    font-size: 24px;
+    background: linear-gradient(45deg, #61dafb, #ff6347, #ffeb3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+  }
+  
