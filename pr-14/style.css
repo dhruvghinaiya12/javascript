@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34; 
+    color: #61dafb; /* Light blue color */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the clock container */
+.clock {
+    text-align: center;
+    background: #1e1e1e; /* Slightly lighter background for the clock */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Container for time and AM/PM */
+#time-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Style the time */
+#time {
+    font-size: 80px;
+    font-weight: bold;
+    margin-right: 10px; /* Space between time and AM/PM */
+}
+
+/* Style the AM/PM indicator */
+#ampm {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px; /* Align AM/PM to be at the same height as the time */
+}
+
+/* Style the date */
+#date {
+    font-size: 24px;
+    margin-top: 10px;
+}
