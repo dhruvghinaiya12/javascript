@@ -8,7 +8,7 @@ function customer() {
         clearInterval(Customer);
         client(); 
       }
-    }, 10);
+    }, 1);
   }
   
   function client() {
@@ -21,7 +21,7 @@ function customer() {
         clearInterval(Client);
         projects(); 
       }
-    }, 10);
+    }, 1);
   }
   
   function projects() {
@@ -34,7 +34,7 @@ function customer() {
         clearInterval(Projects);
         coffeeWithClient(); 
       }
-    }, 10);
+    }, 1);
   }
   
   function coffeeWithClient() {
@@ -46,7 +46,7 @@ function customer() {
       if (coffeeCount == Number(coffeeTotal) + 1) {
         clearInterval(Coffee);
       }
-    }, 10);
+    }, 1);
   }  
   customer();
 
