@@ -27,7 +27,9 @@ function clock() {
   if (hours > 12) {
     hours -= 12;
   }
-  hours = String(hours).padStart(2, '0');
+  if(hours < 12) {
+    hours = "0" + hours;
+  }
 
   time.innerHTML = `${hours}:${minutes}:${seconds}`;
 
