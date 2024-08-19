@@ -8,9 +8,6 @@ function clock() {
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
 
-  if (hours < 10) {
-    hours = "0" + hours;
-  } 
 
   if (minutes < 10) {
     minutes = "0" + minutes;
@@ -19,6 +16,7 @@ function clock() {
   if (seconds < 10) {
     seconds = "0" + seconds;
   } 
+
 
   if (date.getHours() >= 12) {
     ampm.innerHTML = "PM";
@@ -29,6 +27,7 @@ function clock() {
   if (hours > 12) {
     hours -= 12;
   }
+  hours = String(hours).padStart(2, '0');
 
   time.innerHTML = `${hours}:${minutes}:${seconds}`;
 
