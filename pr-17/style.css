@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.post-container {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.post-header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-header-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.post-header-info h6 {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.post-image {
+  background: url(./img/post-1.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.post-content {
+  padding: 15px;
+  line-height: 2;
+}
+.post-content span {
+    color:#0095f6;
+}
+
+
+.post-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-top: 1px solid #eee;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+}
+
+.post-icons i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.post-icons i:hover {
+  color: #888;
+}
+
+.post-icons span {
+  margin-left: 8px;
+  font-size: 16px;
+}
