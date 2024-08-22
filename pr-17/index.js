@@ -23,7 +23,7 @@ shareCountSpan.innerHTML = shareCount;
 document.getElementById("share").addEventListener("click", () => {
   shareCount++;
   shareCountSpan.innerHTML = shareCount;
-  sessionStorage.setItem("share", shareCount);
+  sessionStorage.setItem("shareCount", shareCount);
 });
 
 let downloadCount = Number(sessionStorage.getItem("downloadCount")|| 0);
@@ -31,8 +31,24 @@ const downloadCountSpan = document.getElementById("DownloadCount");
 
 downloadCountSpan.innerHTML = downloadCount;
 
-document.getElementById("download").addEventListener("click", () => {
+document.getElementById("bookmark").addEventListener("click", () => {
     downloadCount ++;
   downloadCountSpan.innerHTML = downloadCount;
   sessionStorage.setItem("downloadCount", downloadCount);
+});
+
+document.getElementById('followBtn').addEventListener('click', function() {
+  const btn = this;
+
+  if (btn.classList.contains('following')) {
+    btn.classList.remove('following');
+    btn.innerHTML = 'Follow';
+    btn.style.backgroundColor = '#0095f6';
+    btn.style.color = '#fff';
+  } else {
+    btn.classList.add('following');
+    btn.innerHTML = 'Following';
+    btn.style.backgroundColor = '#e0e0e0';
+    btn.style.color = '#000';
+  }
 });
