@@ -1,4 +1,5 @@
-let user = JSON.parse(localStorage.getItem("user")) || [];
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
 document.getElementById("SignUpBtn").addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -8,7 +9,8 @@ document.getElementById("SignUpBtn").addEventListener("click", (e) => {
     email: document.getElementById("email").value,
     password: document.getElementById("Password").value,
   };
-  user.push(data);
-  localStorage.setItem("user", JSON.stringify(user));
+
+  users.push(data);
+  localStorage.setItem("users", JSON.stringify(users));
   window.location.href = "./login.html";
 });
