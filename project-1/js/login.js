@@ -11,12 +11,33 @@ document.getElementById("SignUpBtn").addEventListener("click", (e) => {
   let password = document.getElementById("Password").value;
 
   let User = users.find(user => user.email === email && user.password === password);
-
-  if (User) {
-    alert("Login successful!");
-    window.location.href = "../index.html"; 
+  
+  if(User) {
+    alert("Login successful");
+    localStorage.setItem("username", User.name);
+    localStorage.setItem("Login", true);
+    window.location.href = "/project-1/index.html";
   } else {
-    alert("Invalid email or password. Please try again.");
+    alert("Login failed, please try again");
   }
 });
+
+if (localStorage.getItem("Login")) {
+  const logoutElement = document.getElementById("logout");
+  
+  if (logoutElement) { 
+    logoutElement.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      localStorage.removeItem("username");
+      localStorage.removeItem("Login");
+
+      window.location.href = "/project-1/index.html";
+    });
+  } else {
+    console.log("Logout element not found in the DOM.");
+  }
+}
+
+
 

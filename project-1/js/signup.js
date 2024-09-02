@@ -16,6 +16,6 @@ document.getElementById("SignUpBtn").addEventListener("click", (e) => {
 
   users.push(data);
   localStorage.setItem("users", JSON.stringify(users));
-  window.location.href = "./login.html";
+  window.location.href = "/project-1/index.html";
 });
 

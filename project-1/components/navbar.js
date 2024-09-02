@@ -1,5 +1,9 @@
 const Navbar=()=>{
+
+  let username=localStorage.getItem('username');
+  let Login=localStorage.getItem('Login');
     return`
+
      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="/project-1/index.html">Navbar</a>
@@ -26,12 +30,12 @@ const Navbar=()=>{
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="/project-1/pages/signup.html"
-                  >signup</a
+                  >${Login ? username :"signup"}</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/project-1/pages/login.html"
-                  >login</a
+                <a class="nav-link active" href="/project-1/pages/login.html"  id="logout"
+                  >${Login ? "Logout" : "Login"}</a
                 >
               </li>
               <li class="nav-item">
