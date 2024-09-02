@@ -16,7 +16,7 @@ document.getElementById("SignUpBtn").addEventListener("click", (e) => {
     alert("Login successful");
     localStorage.setItem("username", User.name);
     localStorage.setItem("Login", true);
-    window.location.href = "/project-1/index.html";
+    window.location.href = "/project-1/pages/login.html";
   } else {
     alert("Login failed, please try again");
   }
