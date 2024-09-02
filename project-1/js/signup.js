@@ -1,3 +1,7 @@
+import Navbar from "../components/navbar.js";
+document.getElementById("navbar").innerHTML = Navbar()
+
+
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
 document.getElementById("SignUpBtn").addEventListener("click", (e) => {
@@ -14,3 +18,4 @@ document.getElementById("SignUpBtn").addEventListener("click", (e) => {
   localStorage.setItem("users", JSON.stringify(users));
   window.location.href = "./login.html";
 });
+
