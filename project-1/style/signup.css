@@ -1,21 +1,38 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .main-form {
-    height: 100%;
-    margin: 0;
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #userdata {
-    width: 25%;
-  }
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  height: 100%;
+  margin: 0;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#userdata,
+#productdata {
+  width: 25%;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0d6dfddc;
 }
