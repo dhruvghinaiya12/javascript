@@ -21,7 +21,7 @@ const handleProduct = (e) => {
   }
 products.push(product);
   localStorage.setItem("products", JSON.stringify(products));
-  
+  window.location.href = "/project-1/pages/product.html";  
 };
 
 document
