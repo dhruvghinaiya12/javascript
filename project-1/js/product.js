@@ -20,13 +20,14 @@ const UIProducts = (data) => {
   });
 };
 UIProducts(products);
+
 const handlesort = (orderby) => {
   if (orderby === "lth") {
-    let temp = products.sort((a, b) => a.price - b.price);
-    UIProducts(temp);
+    let store = products.sort((a, b) => a.price - b.price);
+    UIProducts(store);
   } else if (orderby === "htl") {
-    let temp = products.sort((a, b) => b.price - a.price);
-    UIProducts(temp);
+    let store = products.sort((a, b) => b.price - a.price);
+    UIProducts(store);
   }
 };
 
@@ -34,10 +35,10 @@ const handleCategory = (category) => {
   if (category === "all") {
     UIProducts(products);
   } else {
-    let temp = products.filter(
+    let store = products.filter(
       (ele) => ele.category.toLowerCase() === category.toLowerCase()
     );
-    UIProducts(temp);
+    UIProducts(store);
   }
 };
 
@@ -49,3 +50,12 @@ document.querySelector(".filter-section").addEventListener("change", (e) => {
     handleCategory(e.target.value);
   }
 });
+const search = (e) => {
+  e.preventDefault();
+
+  let searchValue = document.getElementById("search-input").value;
+  let temp = products.filter((ele) => ele.title.toLowerCase().includes(searchValue.toLowerCase()));
+  UIProducts(temp);
+};
+
+document.getElementById("search-icon").addEventListener("click", search);

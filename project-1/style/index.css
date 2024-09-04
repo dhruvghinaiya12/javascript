@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
 }
 
 .main-1-img {
@@ -19,10 +22,11 @@
 }
 
 .new-collection {
+  font-family: "Dancing Script", cursive;
   font-size: 26px;
   font-style: italic;
   letter-spacing: 0.05em;
-  color: #6a6a6a;
+  color: #292f2f;
   margin-left: 15%;
   margin-bottom: 5px;
 }
@@ -34,10 +38,10 @@
   margin-bottom: 20px;
   margin-left: 12%;
 }
-.main-1-right a{
+.main-1-right a {
   margin-left: 15%;
 }
- .main-1-right a button {
+.main-1-right a button {
   background-color: #f8a888;
   border: none;
   padding: 8px 40px;
@@ -50,4 +54,78 @@
   }
 }
 
+.main-2-left {
+  background-image: url("../img/sec-2-img.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 471px;
+  height: 379px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.left-box {
+  background-color: white;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-1-txt {
+  font-family: "Dancing Script", cursive;
+  display: block;
+  font-size: 24px;
+  color: #333;
+}
+
+.left-2-txt {
+  display: block;
+  font-family: "Serif", serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.shop-now {
+  display: inline-block;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 2px solid #333;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+.right-box {
+  background-color: rgba(255, 255, 255, 0.856);
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-2-right {
+  background-image: url("../img/a.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 471px;
+  height: 379px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-now button{
+  background-color: #cceaea;
+  color: #2f2e2e;
+  font-size: 20px;
+  padding: 6px 25px;
+  border: none;
+  cursor: pointer;
+}
