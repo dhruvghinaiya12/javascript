@@ -46,3 +46,16 @@
   color: #fcb08c !important;
   transition: color 0.4s ease;
 }
+.form-control {
+  background-color: transparent;
+  border: 1px solid #ccc; 
+  border-radius: 20px; 
+  padding: 10px 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #fcb08c; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+}
