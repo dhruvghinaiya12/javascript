@@ -111,6 +111,9 @@
   flex-direction: column;
   align-items: center;
 }
+.main-2 {
+  margin-top: 80px;
+}
 .main-2-right {
   background-image: url("../img/a.jpg");
   background-size: cover;
@@ -121,11 +124,141 @@
   justify-content: center;
   align-items: center;
 }
-.order-now button{
+.order-now button {
   background-color: #cceaea;
   color: #2f2e2e;
   font-size: 20px;
   padding: 6px 25px;
   border: none;
   cursor: pointer;
+}
+
+.main-3 {
+  margin-top: 13%;
+}
+
+.main-3-left-txt {
+  font-size: 60px;
+  color: #292f2f;
+  line-height: 1.1em;
+}
+.main-left-2-txt {
+  line-height: normal;
+  font-size: 22px;
+  font-family: "Dancing Script", cursive;
+  color: #292f2f;
+}
+.main-3-text p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.7em;
+  color: #292f2fc9;
+}
+.main-3-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+  width: fit-content;
+}
+.main-3-right {
+  width: 485px;
+  height: 492px;
+  position: relative;
+  z-index: 10;
+  margin: 60px auto;
+  box-shadow: 0 0 0 5px #000;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  left: 60px;
+}
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 485px;
+  height: auto;
+}
+.main3-left-box {
+  width: 548px;
+  height: 686px;
+  background-color: #cceaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-3-box-img {
+  width: 448px;
+  height: 500px;
+}
+
+.tropical-collection {
+  text-align: center;
+}
+
+.tropical-collection span {
+  display: block;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  text-decoration: underline;
+  color: #292f2fd6;
+  margin-bottom: 15px;
+}
+
+.tropical-collection a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #292f2fd7;
+  border-bottom: 1px solid #333;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.tropical-collection a:hover {
+  color: #555;
+  border-bottom: 1px solid #555;
+}
+.main3-right-box {
+  width: 548px;
+  height: 686px;
+  background-color: #f5e5d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.main3-left-box2 {
+  width: 548px;
+  height: 680px;
+  background-color: #fff;
+  box-shadow: 0 0 0 5px #000;
+  margin-top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-3-box-img2 {
+  width: 448px;
+  height: 500px;
+  margin-top: -12px;
 }
