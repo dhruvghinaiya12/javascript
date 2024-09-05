@@ -1,48 +1,88 @@
 import Navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = Navbar();
 
-import handleLogout from "../components/helper.js";  
+import handleLogout from "../components/helper.js";
 handleLogout();
 
-
-/*---------------------------------------------slider------------------------------------------------*/ 
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-let currentIndex = 1; // Start from the first actual image (since we added cloned slides)
+/*---------------------------------------------slider-1------------------------------------------------*/
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
+let currentIndex = 1;
 const totalSlides = slides.length;
 
-// Set initial position to the first actual image
 slider.style.transform = `translateX(${-485 * currentIndex}px)`;
 
 function slideToNext() {
   currentIndex++;
-  slider.style.transition = 'transform 0.5s ease-in-out'; // Add smooth transition
+  slider.style.transition = "transform 0.5s ease-in-out";
   slider.style.transform = `translateX(${-485 * currentIndex}px)`;
 
-  // When the last slide is reached (cloned first slide), reset to the first actual image
   if (currentIndex === totalSlides - 1) {
     setTimeout(() => {
-      slider.style.transition = 'none'; // Disable transition for the jump back
-      currentIndex = 1; // Jump back to the first actual image
-      slider.style.transform = `translateX(${-485 * currentIndex}px)`;
-    }, 500); // Timeout must match the transition duration
-  }
-}
-
-function slideToPrev() {
-  currentIndex--;
-  slider.style.transition = 'transform 0.5s ease-in-out';
-  slider.style.transform = `translateX(${-485 * currentIndex}px)`;
-
-  // When the first slide is reached (cloned last slide), reset to the last actual image
-  if (currentIndex === 0) {
-    setTimeout(() => {
-      slider.style.transition = 'none';
-      currentIndex = totalSlides - 2; // Jump back to the last actual image
+      slider.style.transition = "none";
+      currentIndex = 1;
       slider.style.transform = `translateX(${-485 * currentIndex}px)`;
     }, 500);
   }
 }
 
-// Auto-slide every 3 seconds
+function slideToPrev() {
+  currentIndex--;
+  slider.style.transition = "transform 0.5s ease-in-out";
+  slider.style.transform = `translateX(${-485 * currentIndex}px)`;
+
+  if (currentIndex === 0) {
+    setTimeout(() => {
+      slider.style.transition = "none";
+      currentIndex = totalSlides - 2;
+      slider.style.transform = `translateX(${-485 * currentIndex}px)`;
+    }, 500);
+  }
+}
+
 setInterval(slideToNext, 3000);
+
+/*---------------------------------------------slider-2------------------------------------------------*/
+const secondslider = document.querySelector("#second-slider");
+const rightButton = document.querySelector(".slider-right-arrow");
+const leftButton = document.querySelector(".slider-left-arrow");
+const images = document.querySelectorAll("#second-slider img");
+const imageWidth = 423;
+const visibleImages = 3;
+const totalImages = images.length;
+
+let currentIndexx = 0;
+
+secondslider.style.width = `${imageWidth * totalImages}px`;
+
+const maxIndex = totalImages - visibleImages;
+
+function updateArrowButtons() {
+  leftButton.disabled = currentIndexx === 0;
+  rightButton.disabled = currentIndexx === totalImages - visibleImages;
+}
+
+function moveToNextSlide() {
+  if (currentIndexx < totalImages - visibleImages) {
+    currentIndexx++;
+    secondslider.style.transform = `translateX(-${
+      currentIndexx * imageWidth
+    }px)`;
+  }
+  updateArrowButtons();
+}
+
+function moveToPrevSlide() {
+  if (currentIndexx > 0) {
+    currentIndexx--;
+    secondslider.style.transform = `translateX(-${
+      currentIndexx * imageWidth
+    }px)`;
+  }
+  updateArrowButtons();
+}
+
+updateArrowButtons();
+
+rightButton.addEventListener("click", moveToNextSlide);
+leftButton.addEventListener("click", moveToPrevSlide);
