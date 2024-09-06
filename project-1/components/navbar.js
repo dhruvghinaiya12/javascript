@@ -3,7 +3,7 @@ const Navbar = () => {
   let Login = localStorage.getItem("Login");
 
   return `
-   <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="/project-1/index.html">PoSTER GAL</a>
     <button
@@ -17,11 +17,8 @@ const Navbar = () => {
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div
-      class="collapse navbar-collapse d-flex justify-content-center gap-5"
-      id="navbarSupportedContent"
-    >
-      <ul class="navbar-nav gap-4 ms-5 text-uppercase">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav gap-4 mx-auto text-uppercase">
         <li class="nav-item">
           <a
             class="nav-link active nav-link-new"
@@ -45,8 +42,28 @@ const Navbar = () => {
             >add product</a
           >
         </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active nav-link-new"
+            href="/project-1/pages/login.html"
+            id="logout"
+          >
+            <i
+              class="fa-solid ${Login ? "fa-right-from-bracket" : "fa-user"}"
+            ></i>
+            ${Login ? "Logout" : "Login"}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active nav-link-new"
+            href="/project-1/pages/cart.html"
+          >
+            <i class="fas fa-shopping-cart"></i> Cart
+          </a>
+        </li>
       </ul>
-      <form class="d-flex ms-5" role="search">
+      <form class="d-flex ms-lg-5 mt-3 mt-lg-0" role="search">
         <div class="search-container">
           <i class="fas fa-search search-icon" id="search-icon"></i>
           <input
@@ -58,36 +75,10 @@ const Navbar = () => {
           />
         </div>
       </form>
-      <div
-        class="collapse navbar-collapse d-flex justify-content-center gap-5"
-        id="navbarSupportedContent"
-      >
-        <ul class="navbar-nav text-uppercase">
-          <li class="nav-item">
-            <a
-              class="nav-link active nav-link-new"
-              href="/project-1/pages/login.html"
-              id="logout"
-            >
-              <i
-                class="fa-solid ${Login ? "fa-right-from-bracket" : "fa-user"}"
-              ></i>
-              ${Login ? "Logout" : "Login"}
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link active nav-link-new"
-              href="/project-1/pages/cart.html"
-            >
-              <i class="fas fa-shopping-cart"></i> Cart
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </nav>
+
 
   `;
 };
