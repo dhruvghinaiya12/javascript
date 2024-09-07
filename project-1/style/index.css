@@ -552,22 +552,59 @@ input[type="email"] {
   .image-slider-container {
     width: 100%;
     padding: 0;
+    overflow: hidden;
+  }
+
+  .image-slider {
+    display: flex;
+    transition: none; 
   }
 
   .image-container {
     padding: 5px;
+    min-width: 100%;
+    box-sizing: border-box;
   }
- .image-container img{
-  max-width: 100%;
- }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .image-text {
     font-size: 14px;
-    padding: 0 60px;
+    padding: 0 10px;
   }
 
   .slider-arrow {
     font-size: 20px;
     padding: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slider-left-arrow {
+    left: 10px;
+  }
+
+  .slider-right-arrow {
+    right: 10px;
   }
 }
 
+@media (max-width: 576px) {
+  .image-container {
+    padding: 2px;
+  }
+
+  .image-text {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+
+  .slider-arrow {
+    font-size: 18px;
+    padding: 6px;
+  }
+}
