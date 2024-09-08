@@ -19,7 +19,7 @@ const Navbar = () => {
     </button>
     <div class="head-menu">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav gap-2 mx-auto text-uppercase">
+      <ul class="navbar-nav gap-2 mx-auto me-5 text-uppercase">
         <li class="nav-item">
           <a class="nav-link active nav-link-new" aria-current="page" href="/project-1/index.html">Home</a>
         </li>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <a class="nav-link active" href="/project-1/pages/addproduct.html">Add Product</a>
         </li>
       </ul>
-      <form class="d-flex me-5" role="search">
+      <form class="d-flex ms-5 me-5" role="search">
         <div class="search-container">
           <i class="fas fa-search search-icon" id="search-icon"></i>
           <input
