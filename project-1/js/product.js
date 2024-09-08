@@ -7,17 +7,29 @@ let products = JSON.parse(localStorage.getItem("products")) || [];
 
 const UIProducts = (data) => {
   document.getElementById("products").innerHTML = "";
-  data.map((ele) => {
-    let img = createTag("img", ele.image);
-    let title = createTag("h3", ele.title);
-    let price = createTag("p", `Price: $${ele.price}`);
-    let category = createTag("h3", ele.category);
-    let btn = createTag("button", "Add to Cart");
-    let div = document.createElement("div");
-    div.className = "main-product";
-    div.append(img, title, price, category, btn);
-    document.getElementById("products").append(div);
-  });
+  document.getElementById("message").innerHTML = "";
+  if (data.length === 0) {
+    message.innerHTML = `
+     <div class="no-products-message">
+      <p class="no-products">
+      Your store is waiting for its first products! Add items now to start attracting customers and growing your business.
+        </p> 
+       <a href="/project-1/pages/addproduct.html" class="add-product-link">click here to add products...</a>
+    </div>
+      `;
+  } else {
+    data.map((ele) => {
+      let img = createTag("img", ele.image);
+      let title = createTag("h3", ele.title);
+      let price = createTag("p", `Price: $${ele.price}`);
+      let category = createTag("h3", ele.category);
+      let btn = createTag("button", "Add to Cart");
+      let div = document.createElement("div");
+      div.className = "main-product";
+      div.append(img, title, price, category, btn);
+      document.getElementById("products").append(div);
+    });
+  }
 };
 UIProducts(products);
 
@@ -54,7 +66,9 @@ const search = (e) => {
   e.preventDefault();
 
   let searchValue = document.getElementById("search-input").value;
-  let temp = products.filter((ele) => ele.title.toLowerCase().includes(searchValue.toLowerCase()));
+  let temp = products.filter((ele) =>
+    ele.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
   UIProducts(temp);
 };
 
