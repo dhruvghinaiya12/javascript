@@ -17,6 +17,7 @@ const Navbar = () => {
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="head-menu">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav gap-2 mx-auto text-uppercase">
         <li class="nav-item">
@@ -56,6 +57,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      </div>
     </div>
   </div>
 </nav>

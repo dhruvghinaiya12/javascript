@@ -86,3 +86,5 @@ updateArrowButtons();
 
 rightButton.addEventListener("click", moveToNextSlide);
 leftButton.addEventListener("click", moveToPrevSlide);
+
+

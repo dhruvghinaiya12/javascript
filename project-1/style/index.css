@@ -413,6 +413,13 @@ input[type="email"] {
 
 /* responsive for mobile view */
 @media (max-width: 768px) {
+  .main-site{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
   .main-1 .container-fluid {
     padding: 0;
     margin: 0;
