@@ -5,6 +5,28 @@ import handleLogout, { createTag } from "../components/helper.js";
 handleLogout();
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
+let cartproduct = [];
+
+const exist = (id) => {
+  const product = cartproduct.filter((ele) => ele.id == id);
+  if (product.length > 0) {
+    alert("Product already exists");
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const addToCart = (ele) => {
+  if (exist(ele.id)) {
+  
+  } else {
+    cartproduct.push(ele);
+    alert("Product added to cart");
+  }
+  console.log(cartproduct);
+};
+
 const UIProducts = (data) => {
   document.getElementById("products").innerHTML = "";
   document.getElementById("message").innerHTML = "";
@@ -24,6 +46,7 @@ const UIProducts = (data) => {
       let price = createTag("p", `Price: $${ele.price}`);
       let category = createTag("h3", ele.category);
       let btn = createTag("button", "Add to Cart");
+      btn.addEventListener("click", () => addToCart(ele)); 
       let div = document.createElement("div");
       div.className = "main-product";
       div.append(img, title, price, category, btn);

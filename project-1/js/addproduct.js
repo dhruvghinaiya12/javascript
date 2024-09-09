@@ -17,6 +17,7 @@ const handleProduct = (e) => {
     price:getValue(".price"),
     category:getValue(".category"),
     image:getValue(".img-url"),
+    id:Date.now()
 
   }
 products.push(product);

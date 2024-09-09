@@ -3,3 +3,5 @@ document.getElementById("navbar").innerHTML = Navbar()
 
 import handleLogout from "../components/helper.js";  
 handleLogout();
+
+  
