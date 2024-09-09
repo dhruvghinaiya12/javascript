@@ -127,12 +127,10 @@ html, body {
   font-size: 1rem;
   color: #555;
   transition: background-color 0.3s, border-color 0.3s;
+  &:hover {
+    background-color: #e0e0e0;
+  }
 }
-
-.filter-section label:hover {
-  background-color: #e0e0e0;
-}
-
 .filter-section input[type="radio"] {
   display: none;
 }
@@ -186,16 +184,13 @@ html, body {
   font-size: 0.9rem;
   font-weight: bold;
   transition: background 0.2s ease;
+  &:hover {
+    background: #0056b3;
+  }
 }
-
-.add-product-link:hover {
-  background: #0056b3;
-}
-
 .container {
   position: relative;
 }
-
 #message {
   position: absolute;
   top: 50%;

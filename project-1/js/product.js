@@ -12,7 +12,7 @@ const UIProducts = (data) => {
     message.innerHTML = `
      <div class="no-products-message">
       <p class="no-products">
-      Your store is waiting for its first products! Add items now to start attracting customers and growing your business.
+       no products added yet, It’s time to stock your store! Add products now and start showcasing your collection.
         </p> 
        <a href="/project-1/pages/addproduct.html" class="add-product-link">click here to add products...</a>
     </div>

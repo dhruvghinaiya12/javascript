@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/navbar.css" />
     <link rel="stylesheet" href="../style/signup.css" />
     <link
       rel="stylesheet"
@@ -27,50 +27,84 @@
     <div class="container-fluid">
       <div id="navbar"></div>
     </div>
-    <div class="main-form">
-      <form id="userdata">
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="username"
+    <div class="container signup-container mt-3">
+      <div class="row main-form-1 mx-auto">
+        <div class="col-md-6 p-5">
+          <form id="userdata">
+            <h2 class="mb-4 form-h2">Sign up</h2>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="fa fa-user"></i
+              ></span>
+              <input
+                type="text"
+                class="form-control border-start-0"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fa fa-mobile-alt"></i>
+              </span>
+              <input
+                type="number"
+                class="form-control border-start-0"
+                id="phone"
+                placeholder="Enter your number"
+              />
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="fa fa-envelope"></i
+              ></span>
+              <input
+                type="email"
+                class="form-control border-start-0"
+                id="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="fa fa-lock"></i
+              ></span>
+              <input
+                type="password"
+                class="form-control border-start-0"
+                id="Password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="agree"
+                required
+              />
+              <label class="form-check-label" for="agree">
+                I agree all statements in <a href="#">Terms of service</a>
+              </label>
+            </div>
+            <button type="button" id="SignUpBtn" class="btn-register">
+              Register
+            </button>
+          </form>
+        </div>
+
+        <div class="col-md-6 signup-image">
+          <img
+            src="../img/signup-image.jpg"
+            alt="Desk Illustration"
+            class="img-fluid"
           />
-          <label for="floatingInput">username</label>
+          <div class="text-center mt-5 already-member">
+            <a href="/project-1/pages/login.html">I am already member</a>
+          </div>
         </div>
-        <div class="form-floating mb-3">
-          <input
-            type="number"
-            class="form-control"
-            id="phone"
-            placeholder="number"
-          />
-          <label for="floatingInput">number</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="email"
-          />
-          <label for="floatingInput">email</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input
-            type="password"
-            class="form-control"
-            id="Password"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Password</label>
-        </div>
-        <div class="button-container">
-          <button type="button" id="SignUpBtn" class="btn btn-primary w-50 p-2">
-            sign up
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   </body>
   <script src="../js/signup.js" type="module"></script>
