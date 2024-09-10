@@ -27,59 +27,31 @@
   <body>
     <div class="container-fluid">
       <div id="navbar"></div>
-      <div class="main-form">
+      <div class="product-form-container mx-auto">
+        <h2 class="pro-h2">Add a New Product</h2>
         <form id="productdata">
-          <div class="form-floating mb-3">
-            <input
-              type="text"
-              class="form-control title"
-              id="floatingTitle"
-              placeholder="title"
-            />
-            <label for="floatingTitle">Title</label>
+          <div class="form-group">
+            <label for="productTitle">Product Title</label>
+            <input type="text" id="productTitle" class="title" placeholder="Enter product title" >
           </div>
-
-          <div class="form-floating mb-3">
-            <input
-              type="number"
-              class="form-control price"
-              id="floatingPrice"
-              placeholder="price"
-            />
-            <label for="floatingPrice">Price</label>
+          <div class="form-group">
+            <label for="productPrice">Price ($)</label>
+            <input type="number" id="productPrice" class="price" placeholder="Enter product price">
           </div>
-
-          <div class="form-floating mb-3">
-            <select
-              class="form-select category"
-              id="floatingCategory"
-              aria-label="Category"
-            >
-              <option value="" disabled selected>Select a category</option>
+          <div class="form-group">
+            <label for="productCategory">Category</label>
+            <select id="productCategory" class="category" >
+              <option value="" disabled selected>Select category</option>
               <option value="Men">Men</option>
               <option value="women">Women</option>
               <option value="kids">kids</option>
             </select>
-            <label for="floatingCategory">Category</label>
           </div>
-
-          <div class="form-floating mb-3">
-            <input
-              type="url"
-              class="form-control img-url"
-              id="floatingImageUrl"
-              placeholder="Image URL"
-            />
-            <label for="floatingImageUrl">Image URL</label>
+          <div class="form-group">
+            <label for="productImage">Product Image URL</label>
+            <input type="text" id="productImageUrl" class="img-url" placeholder="Enter image URL" >
           </div>
-
-          <div class="button-container">
-            <input
-              type="submit"
-              value="add"
-              class="submit-btn text-uppercase"
-            />
-          </div>
+          <button type="submit" class="btn-add-product">Add Product</button>
         </form>
       </div>
     </div>
