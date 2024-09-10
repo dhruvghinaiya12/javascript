@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/navbar.css" />
     <link rel="stylesheet" href="../style/signup.css" />
     <link
       rel="stylesheet"
@@ -27,32 +27,75 @@
     <div class="container-fluid">
       <div id="navbar"></div>
     </div>
-    <div class="main-form">
-      <form id="userdata">
-        <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="email"
+    <div class="container signup-container mt-3">
+      <div class="row main-form-1 mx-auto">
+        <div class="col-md-6 signup-image mt-3 mb-3">
+          <img
+            src="../img/image.png"
+            alt="Desk Illustration"
+            class="img-fluid"
           />
-          <label for="floatingInput">email</label>
+          <div class="text-center mt-5 already-member">
+            <a href="#">Create an account</a>
+          </div>
         </div>
-        <div class="form-floating mb-3">
-          <input
-            type="password"
-            class="form-control"
-            id="Password"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Password</label>
+        <div class="col-md-6 p-5 px-0 mt-3 mb-3">
+          <form id="userdata">
+            <h2 class="mb-4 fw-bolders form-h2">Login</h2>
+
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="fa fa-envelope"></i
+              ></span>
+              <input
+                type="email"
+                class="form-control border-start-0"
+                id="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="fa fa-lock"></i
+              ></span>
+              <input
+                type="password"
+                class="form-control border-start-0"
+                id="Password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="agree"
+                required
+              />
+              <label class="form-check-label" for="agree"> Remember me </label>
+            </div>
+            <button type="button" id="SignUpBtn" class="btn-register">
+              Log in
+            </button>
+            <div class="text-center right-main d-flex gap-3 align-items-center">
+              <span class="right-span">Or login with</span>
+              <div>
+                <div class="social-icons">
+                  <a href="#" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="google">
+                    <i class="fab fa-google"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="button-container">
-          <button type="button" id="SignUpBtn" class="btn btn-primary w-50 p-2">
-            login
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   </body>
   <script src="../js/login.js" type="module"></script>
