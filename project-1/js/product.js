@@ -5,12 +5,11 @@ import handleLogout, { createTag } from "../components/helper.js";
 handleLogout();
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-let cartproduct = [];
+let cartproduct = JSON.parse(localStorage.getItem("cartproduct")) || [];
 
 const exist = (id) => {
   const product = cartproduct.filter((ele) => ele.id == id);
   if (product.length > 0) {
-    alert("Product already exists");
     return true;
   } else {
     return false;
@@ -19,12 +18,19 @@ const exist = (id) => {
 
 const addToCart = (ele) => {
   if (exist(ele.id)) {
-  
+    cartproduct = cartproduct.map((item) => {
+      if (item.id == ele.id) {
+        item.quantity += 1; 
+        alert("Quantity increased");
+      }
+      return item;
+    });
   } else {
+    ele.quantity = 1;
     cartproduct.push(ele);
     alert("Product added to cart");
   }
-  console.log(cartproduct);
+  localStorage.setItem("cartproduct", JSON.stringify(cartproduct));
 };
 
 const UIProducts = (data) => {
