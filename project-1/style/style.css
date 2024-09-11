@@ -198,3 +198,131 @@ html, body {
   transform: translate(-50%, 50%);
   text-align: center;
 }
+
+/*-----------------------------------------------cart-page-------------------------------------------*/
+.emptycart {
+text-align: center;
+padding: 40px;
+}
+.emptycart img {
+width: 290px;
+height: auto;
+margin-bottom: 20px;
+}
+.emptycart h2 {
+color: #261f44;
+font-weight: 700;
+line-height: 1.3;
+}
+.cart-detail {
+color: #6F6985;
+font-size: 17px;
+max-width: 600px;
+margin: 0 auto;
+}
+.view-products {
+background-color: #ff5938;
+color: white;
+font-weight: 700;
+text-decoration: none;
+padding: 15px 25px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+&:hover {
+background-color: #e65b2e;
+}
+}
+
+#cartItems{
+  width: 60vw;
+  margin: 40px auto 0 auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+.Cart-Item {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr; 
+  align-items: center; 
+  justify-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 20px 0;
+}
+.Cart-Item-1{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.Cart-Item-1 img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+.Cart-Item-1 h4{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.Cart-Item h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.Cart-Item p {
+  color: #555;
+  margin: 5px 0;
+}
+
+.handleQuantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.handleQuantity button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.handleQuantity h3 {
+  margin: 0 10px;
+}
+
+.Cart-Item h2 {
+  font-size: 18px;
+  color: #ffc107;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover {
+    background-color: #d32f2f;
+  }
+}
+.Cart-Header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr; 
+  padding: 20px 0;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  text-align: center; 
+}
+
+.Cart-Header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px;
+}
+
+
