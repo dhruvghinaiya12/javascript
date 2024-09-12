@@ -1,14 +1,8 @@
-
 /*------------------------------------------------signup-login-Add-product pages--------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
- .signup-container{
+.signup-container {
   animation: fadeIn 0.7s ease-in-out;
   transition: all 0.3s ease-in-out;
- }
+}
 .main-form-1 {
   width: 65%;
   background-color: #fff;
@@ -38,7 +32,7 @@
   background-color: transparent;
   padding-left: 0;
 }
-#userdata{
+#userdata {
   width: 300px;
   margin-left: 45px;
 }
@@ -76,7 +70,7 @@
     background-color: #fcb08cab;
     border: none;
     color: #fff;
-  }  
+  }
 }
 .signup-image {
   display: flex;
@@ -94,7 +88,7 @@
   font-size: 13px;
   color: #333;
 }
-.right-main{
+.right-main {
   margin-top: 65px;
 }
 .right-span {
@@ -129,60 +123,70 @@
   background-color: #db4437;
 }
 /*--------------------------------------------------add-product page--------------------------------------------------------- */
-    .product-form-container {
-      background-color: #fff;
-      padding: 1.8rem;
-      margin-top: 10px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      animation: fadeIn 0.7s ease-in-out;
-      transition: all 0.3s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: scale(0.9); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-    .pro-h2 {
-      text-align: center;
-      margin-bottom: 1.4rem;
-      color: #333;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .form-group {
-      margin-bottom: 1.4rem;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #4a4a4a;
-    }
-    input, select {
-      width: 100%;
-      padding: 0.5rem;
-      border-radius: 10px;
-      border: 1px solid #ccd1d9;
-      font-size: 1rem;
-      background-color: #f9f9f9;
-    }
-    .btn-add-product {
-      width: 100%;
-      background-color: #82c1ff;
-      color: white;
-      padding: 0.6rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(130, 193, 255, 0.3);
-      transition: background-color 0.3s ease-in-out, transform 0.2s;
-      &:hover {
-        background-color: #66b0ff;
-        transform: translateY(-2px);
-      }
-    }  
-    .form-group input:focus, .form-group select:focus {
-      border-color: #82c1ff;
-      outline: none;
-    }
+.product-form-container {
+  background-color: #fff;
+  padding: 1.8rem;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  animation: fadeIn 0.7s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.pro-h2 {
+  text-align: center;
+  margin-bottom: 1.4rem;
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+}
+.form-group {
+  margin-bottom: 1.4rem;
+}
+.add-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+.add-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccd1d9;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+.btn-add-product {
+  width: 100%;
+  background-color: #82c1ff;
+  color: white;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(130, 193, 255, 0.3);
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  &:hover {
+    background-color: #66b0ff;
+    transform: translateY(-2px);
+  }
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #82c1ff;
+  outline: none;
+}
+.ftr{
+margin-top: 8rem;
+}

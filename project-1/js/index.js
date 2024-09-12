@@ -1,9 +1,10 @@
-import Navbar from "../components/navbar.js";
+import Navbar, { footer } from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = Navbar();
 
 import handleLogout from "../components/helper.js";
 handleLogout();
 
+document.getElementById("Footer").innerHTML= footer();
 /*---------------------------------------------slider-1------------------------------------------------*/
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");

@@ -3,12 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 /*----------------------------------------------------------ALL-PRODUCT------------------------------------------------- */
 #products {
   display: grid;
@@ -189,14 +183,8 @@ html, body {
     background: #0056b3;
   }
 }
-.container {
-  position: relative;
-}
 #message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(0, 70%);
   text-align: center;
 }
 
@@ -327,4 +315,9 @@ background-color: #e65b2e;
   padding: 0 10px;
 }
 
-
+.ftr{
+  margin-top: 16rem;
+}
+.ftr-cart{
+  margin-top: 18rem;
+}

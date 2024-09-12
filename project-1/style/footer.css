@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+/*-------------------------------------------------footer--------------------------------------------------*/
+.footer {
+    margin: 100px 0 50px 0;
+  }
+  .ft-txt {
+    display: block;
+    font-size: 18px;
+    color: #2f2e2ed0;
+    margin-bottom: 10px;
+  }
+  .ft-label {
+    display: block;
+    font-size: 18px;
+    padding-right: 24.7rem;
+    margin-bottom: 10px;
+  }
+  input[type="email"] {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 2px;
+    outline: none;
+  }
+  .subscribe-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .check{
+    margin-right: 10px;
+  }
+  .sub-span {
+    font-size: 18px;
+    color: #2f2e2ee5;
+    margin-right: 36px;
+  }
+  .subscribe-btn {
+    width: 108px;
+    height: 40px;
+    background-color: #fcb08c;
+    color: #00000097;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+    &:hover {
+      background-color: #fcb08cab;
+    }
+  }
+  
+  .social-Icons {
+    margin: 35px 0 20px 0;
+  }
+  
+  .social-Icons a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 18px;
+  }
+  .footer-text {
+    font-size: 16px;
+    color: #2f2e2eaa;
+    margin-top: 20px; 
+    line-height: 1.6em;
+  }
+  
+  .footer-text a {
+    color: #2f2e2eaa;
+    text-decoration: underline;
+  }

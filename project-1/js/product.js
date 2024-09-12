@@ -1,5 +1,6 @@
-import Navbar from "../components/navbar.js";
+import Navbar, { footer } from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = Navbar();
+document.getElementById("Footer").innerHTML = footer();
 
 import handleLogout, { createTag } from "../components/helper.js";
 handleLogout();
@@ -20,7 +21,7 @@ const addToCart = (ele) => {
   if (exist(ele.id)) {
     cartproduct = cartproduct.map((item) => {
       if (item.id == ele.id) {
-        item.quantity += 1; 
+        item.quantity += 1;
         alert("Quantity increased");
       }
       return item;
@@ -52,7 +53,7 @@ const UIProducts = (data) => {
       let price = createTag("p", `Price: $${ele.price}`);
       let category = createTag("h3", ele.category);
       let btn = createTag("button", "Add to Cart");
-      btn.addEventListener("click", () => addToCart(ele)); 
+      btn.addEventListener("click", () => addToCart(ele));
       let div = document.createElement("div");
       div.className = "main-product";
       div.append(img, title, price, category, btn);

@@ -65,3 +65,43 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+export const footer=()=>{
+  return `
+   <footer class="footer">
+        <div class="container-fluid">
+          <div class="row-lg text-center">
+            <div class="col-12-lg">
+              <div class="newsletter">
+                <span class="ft-txt">
+                  Subscribe and stay on top of our latest news and promotions
+                </span>
+                <label for="email" class="ft-label">Email *</label>
+                <input type="email" id="email" name="email" required />
+                <div class="subscribe-container">
+                  <div class="ft-top">
+                    <input type="checkbox" class="check" />
+                    <span class="sub-span"
+                      >Yes, subscribe me to your newsletter.</span
+                    >
+                  </div>
+                  <button class="subscribe-btn">Subscribe</button>
+                </div>
+                <div class="social-Icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-text">
+                  <p>
+                    © 2035 by Poster Gal. Powered and secured by
+                    <a href="#">DHRUV</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  `;
+}

@@ -1,6 +1,6 @@
-import Navbar from "../components/navbar.js";
-
+import Navbar, { footer } from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = Navbar();
+document.getElementById("Footer").innerHTML = footer();
 import handleLogout, { getValue } from "../components/helper.js";
 handleLogout();
 
