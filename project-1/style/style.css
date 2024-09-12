@@ -221,12 +221,19 @@ transition: background-color 0.3s ease;
 background-color: #e65b2e;
 }
 }
-
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
 #cartItems{
   width: 60vw;
-  margin: 40px auto 0 auto;
+  margin: 40px 0 0 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .Cart-Item {
   display: grid;
@@ -260,13 +267,11 @@ background-color: #e65b2e;
   color: #555;
   margin: 5px 0;
 }
-
 .handleQuantity {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .handleQuantity button {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -274,17 +279,14 @@ background-color: #e65b2e;
   cursor: pointer;
   font-size: 18px;
 }
-
 .handleQuantity h3 {
   margin: 0 10px;
 }
-
 .Cart-Item h2 {
   font-size: 18px;
   color: #424242;
   font-weight: bold;
 }
-
 .delete-btn {
   padding: 8px 16px;
   background-color: #f44336;
@@ -307,17 +309,76 @@ background-color: #e65b2e;
   font-size: 16px;
   text-align: center; 
 }
-
 .Cart-Header h3 {
   margin: 0;
   font-size: 16px;
   color: #333;
   padding: 0 10px;
 }
-
 .ftr{
   margin-top: 16rem;
 }
 .ftr-cart{
   margin-top: 18rem;
 }
+
+.Cart-Summary {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.Cart-Summary h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.subtotal, .Cart-Summary .gst, .Cart-Summary .total {
+  display: flex;
+  justify-content: space-between; 
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.Cart-Summary .gst {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.Cart-Summary .total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.Cart-Summary .value {
+  margin-left: 10px; 
+}
+#stateSelect {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+.Cart-Summary button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #f8a888;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #fcb08cab;
+  }
+}
+

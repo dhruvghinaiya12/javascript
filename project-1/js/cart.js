@@ -144,13 +144,25 @@ const displayCart = (cartproduct) => {
     let totalWithGst = totalAmount + GSTtotal;
     let div = createTag("div", "");
     div.className = "Cart-Summary";
-    let heading = createTag("h2", "order summary");
-    let subtotal = createTag("h3", `subtotal: $${totalAmount}`);
-    let GST = createTag("h3", `GST: $${GSTtotal}`);
-    let total = createTag("h2", `total: $${totalWithGst}`);
+    let heading = createTag("h1", "order summary");
+    let subtotal = createTag(
+      "h3",
+      `subtotal <span class="value">$${totalAmount}</span>`
+    );
+    subtotal.className = "subtotal";
+
+    let GST = createTag("h3", `GST <span class="value">$${GSTtotal}</span>`);
+    GST.className = "gst";
+
+    let total = createTag(
+      "h2",
+      `total <span class="value">$${totalWithGst}</span>`
+    );
+    total.className = "total";
 
     let stateLabel = createTag("label", "");
     let stateSelect = document.createElement("select");
+    stateSelect.className = "form-select";
     stateSelect.id = "stateSelect";
 
     let defaultOption = document.createElement("option");
@@ -158,7 +170,7 @@ const displayCart = (cartproduct) => {
     defaultOption.disabled = true;
     defaultOption.selected = true;
     stateSelect.appendChild(defaultOption);
-    states.forEach((state) => {
+    states.map((state) => {
       let option = document.createElement("option");
       option.value = state;
       option.textContent = state;
@@ -190,3 +202,4 @@ const displayCart = (cartproduct) => {
 };
 
 displayCart(cartproduct);
+
