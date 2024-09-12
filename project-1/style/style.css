@@ -48,17 +48,18 @@ html, body {
   margin: 5px 0;
 }
 .main-product button {
-  background-color: #007bff;
-  color: white;
+  background-color: #82d0d4;
+  color: #2f2e2eb3;
   border: none;
-  padding: 10px 20px;
+  border-color: #cbebee;
+  padding: 10px 25px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   &:hover {
-    background-color: #0056b3;
+    background-color: #cbebee;
     transform: scale(1.05);
   }
 }
@@ -292,7 +293,8 @@ background-color: #e65b2e;
 
 .Cart-Item h2 {
   font-size: 18px;
-  color: #ffc107;
+  color: #424242;
+  font-weight: bold;
 }
 
 .delete-btn {

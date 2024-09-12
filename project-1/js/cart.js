@@ -41,7 +41,7 @@ const displayCart = (cartproduct) => {
     );
 
     document.getElementById("cartItems").append(label);
-    cartproduct.map((ele) => {
+    cartproduct.map((ele,index) => {
       let div = document.createElement("div");
       div.className = "Cart-Item";
 
@@ -92,7 +92,7 @@ const displayCart = (cartproduct) => {
       let Btn = createTag("button", "Remove");
       Btn.className = "delete-btn";
       Btn.addEventListener("click", () => {
-        cartproduct = cartproduct.filter((item) => item.id !== ele.id);
+        cartproduct.splice(index, 1); 
         localStorage.setItem("cartproduct", JSON.stringify(cartproduct));
         displayCart(cartproduct);
       });

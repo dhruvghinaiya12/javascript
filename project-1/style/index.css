@@ -53,12 +53,10 @@
   color: #000;
   margin-top: 20px;
   transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #fcc8b4c1;
+  }  
 }
-
-.main-1-right a button:hover {
-  background-color: #fcc8b4c1;
-}
-
 /*-------------------------------------------------section-2--------------------------------------------------*/
 .main-2 {
   margin-top: 80px;
@@ -385,10 +383,11 @@ input[type="email"] {
   font-size: 18px;
   transition: background-color 0.3s ease;
   margin-top: 5px;
+  &:hover {
+    background-color: #fcb08cab;
+  }
 }
-.subscribe-btn:hover {
-  background-color: #fcb08cab;
-}
+
 .social-icons {
   margin: 35px 0 20px 0;
 }

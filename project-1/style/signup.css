@@ -64,7 +64,7 @@
 
 .btn-register {
   display: inline-block;
-  background: #6dabe4;
+  background: #f8a888;
   font-size: 12px;
   color: #fff;
   border-bottom: none;
@@ -72,14 +72,12 @@
   border-radius: 5px;
   border: none;
   margin-top: 25px;
+  &:hover {
+    background-color: #fcb08cab;
+    border: none;
+    color: #fff;
+  }  
 }
-
-.btn-register:hover {
-  background-color: #1586e3f0;
-  border: none;
-  color: #fff;
-}
-
 .signup-image {
   display: flex;
   flex-direction: column;
