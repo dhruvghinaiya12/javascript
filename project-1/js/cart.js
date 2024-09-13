@@ -11,6 +11,7 @@ const displayCart = (cartproduct) => {
   document.getElementById("cartItems").innerHTML = "";
   document.getElementById("empty").innerHTML = "";
   document.getElementById("checkout").innerHTML = "";
+  document.getElementById("code").innerHTML="";
 
   if (cartproduct.length == 0) {
     empty.innerHTML = `
@@ -26,7 +27,7 @@ const displayCart = (cartproduct) => {
      </div>
     `;
   } else {
-    let label = document.createElement("div");
+    let label = document.createElement("div","");
     label.className = "Cart-Header";
 
     let labelproduct = createTag("h3", "Product");
@@ -45,10 +46,10 @@ const displayCart = (cartproduct) => {
     document.getElementById("cartItems").append(label);
 
     cartproduct.map((ele, index) => {
-      let div = document.createElement("div");
+      let div = document.createElement("div","");
       div.className = "Cart-Item";
 
-      let div1 = document.createElement("div");
+      let div1 = document.createElement("div","");
       div1.className = "Cart-Item-1";
 
       let img = createTag("img", ele.image);
@@ -63,7 +64,7 @@ const displayCart = (cartproduct) => {
 
       let amount = createTag("h2", `$${ele.price * ele.quantity}`);
 
-      let handleQuantity = document.createElement("div");
+      let handleQuantity = document.createElement("div","");
       handleQuantity.className = "handleQuantity";
 
       let decreaseQuantity = createTag("button", "-");
@@ -103,6 +104,38 @@ const displayCart = (cartproduct) => {
       div.append(div1, category, price, handleQuantity, amount, Btn);
       document.getElementById("cartItems").append(div);
     });
+
+    /*------------------------------------------summary------------------------------------------*/
+let div2 = document.createElement("div");
+div2.className = "promo-code";
+let codeIcon = createTag("i", "");
+codeIcon.className = "fa-solid fa-tag";
+let promoCode = createTag("span", "Enter a promo code");
+promoCode.className = "promo-text";
+div2.append(codeIcon, promoCode);
+promoCode.addEventListener("click", () => {
+ 
+  let inputBox = createTag("input", "");
+  inputBox.type = "text";
+  inputBox.placeholder = "Enter promo code";
+  inputBox.className = "promo-input";
+
+  let applyButton = createTag("button", "Apply");
+  applyButton.className = "apply-button";
+
+  promoCode.append(inputBox,applyButton);
+});
+
+let div3 = createTag("div", "");
+div3.className = "note-section";
+
+let noteIcon = createTag("i", "");
+noteIcon.className = "fa-solid fa-info-circle";
+let note = createTag("span", "Add a note");
+note.className = "note-text";
+div3.append(noteIcon, note);
+
+document.getElementById("code").append(div2, div3);
 
     /*------------------------------------------summary------------------------------------------*/
     const states = [
@@ -183,7 +216,7 @@ const displayCart = (cartproduct) => {
       if (selectedState !== "Select a state") {
         alert(`Checkout successfully!`);
         localStorage.removeItem("cartproduct");
-        window.location.href = "/project-1/pages/product.html";
+        window.location.href = "/project-1/index.html";
       } else {
         alert("Please select your state before proceeding.");
       }
