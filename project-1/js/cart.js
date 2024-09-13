@@ -6,12 +6,12 @@ import handleLogout, { createTag } from "../components/helper.js";
 handleLogout();
 
 let cartproduct = JSON.parse(localStorage.getItem("cartproduct")) || [];
-
+let isTopggle = false;
 const displayCart = (cartproduct) => {
   document.getElementById("cartItems").innerHTML = "";
   document.getElementById("empty").innerHTML = "";
   document.getElementById("checkout").innerHTML = "";
-  document.getElementById("code").innerHTML="";
+  document.getElementById("code").innerHTML = "";
 
   if (cartproduct.length == 0) {
     empty.innerHTML = `
@@ -27,7 +27,7 @@ const displayCart = (cartproduct) => {
      </div>
     `;
   } else {
-    let label = document.createElement("div","");
+    let label = document.createElement("div", "");
     label.className = "Cart-Header";
 
     let labelproduct = createTag("h3", "Product");
@@ -46,10 +46,10 @@ const displayCart = (cartproduct) => {
     document.getElementById("cartItems").append(label);
 
     cartproduct.map((ele, index) => {
-      let div = document.createElement("div","");
+      let div = document.createElement("div", "");
       div.className = "Cart-Item";
 
-      let div1 = document.createElement("div","");
+      let div1 = document.createElement("div", "");
       div1.className = "Cart-Item-1";
 
       let img = createTag("img", ele.image);
@@ -64,7 +64,7 @@ const displayCart = (cartproduct) => {
 
       let amount = createTag("h2", `$${ele.price * ele.quantity}`);
 
-      let handleQuantity = document.createElement("div","");
+      let handleQuantity = document.createElement("div", "");
       handleQuantity.className = "handleQuantity";
 
       let decreaseQuantity = createTag("button", "-");
@@ -105,37 +105,59 @@ const displayCart = (cartproduct) => {
       document.getElementById("cartItems").append(div);
     });
 
-    /*------------------------------------------summary------------------------------------------*/
-let div2 = document.createElement("div");
-div2.className = "promo-code";
-let codeIcon = createTag("i", "");
-codeIcon.className = "fa-solid fa-tag";
-let promoCode = createTag("span", "Enter a promo code");
-promoCode.className = "promo-text";
-div2.append(codeIcon, promoCode);
-promoCode.addEventListener("click", () => {
- 
-  let inputBox = createTag("input", "");
-  inputBox.type = "text";
-  inputBox.placeholder = "Enter promo code";
-  inputBox.className = "promo-input";
+    /*------------------------------------------promo-code------------------------------------------*/
+    let div2 = document.createElement("div");
+    div2.className = "promo-code";
 
-  let applyButton = createTag("button", "Apply");
-  applyButton.className = "apply-button";
+    let codeIcon = createTag("i", "");
+    codeIcon.className = "fa-solid fa-tag";
 
-  promoCode.append(inputBox,applyButton);
-});
+    let promoCode = createTag("span", "Enter a promo code");
+    promoCode.className = "promo-text";
 
-let div3 = createTag("div", "");
-div3.className = "note-section";
+    let inputBox = createTag("input", "");
+    inputBox.type = "text";
+    inputBox.placeholder = "Enter promo code";
+    inputBox.className = "promo-input";
+    inputBox.style.display = "none";
 
-let noteIcon = createTag("i", "");
-noteIcon.className = "fa-solid fa-info-circle";
-let note = createTag("span", "Add a note");
-note.className = "note-text";
-div3.append(noteIcon, note);
+    let applyButton = createTag("button", "Apply");
+    applyButton.className = "apply-button";
+    applyButton.style.display = "none";
 
-document.getElementById("code").append(div2, div3);
+    promoCode.addEventListener("click", () => {
+      if (inputBox.style.display === "none") {
+        inputBox.style.display = "block";
+        applyButton.style.display = "block";
+      } else {
+        inputBox.style.display = "none";
+        applyButton.style.display = "none";
+      }
+    });
+
+    div2.append(codeIcon, promoCode, inputBox, applyButton);
+
+    let div3 = createTag("div", "");
+    div3.className="promo-code1"
+    let note = createTag("span", "Add a note");
+    note.className = "promo-text";
+    let noteIcon = createTag("i", "");
+    noteIcon.className = "fa-solid fa-info-circle";
+
+    let textarea = createTag("textarea", "");
+    textarea.placeholder = "Instructions? Special request? Add them here.";
+    textarea.style.display = "none";
+
+    note.addEventListener("click", () => {
+      if (textarea.style.display === "none") {
+        textarea.style.display = "block";
+      } else {
+        textarea.style.display = "none";
+      }
+    });
+    div3.append(noteIcon, note, textarea);
+
+    document.getElementById("code").append(div2, div3);
 
     /*------------------------------------------summary------------------------------------------*/
     const states = [
@@ -184,13 +206,17 @@ document.getElementById("code").append(div2, div3);
     );
     subtotal.className = "subtotal";
 
-    let GST = createTag("h3", `GST <span class="value">$${GSTtotal}</span>`);
+    let GST = createTag(
+      "h3",
+      `GST <span class="value">$${GSTtotal.toFixed(2)}</span>`
+    );
     GST.className = "gst";
 
     let total = createTag(
       "h2",
-      `total <span class="value">$${totalWithGst}</span>`
+      `total <span class="value">$${totalWithGst.toFixed(2)}</span>`
     );
+
     total.className = "total";
 
     let stateLabel = createTag("label", "");
@@ -235,4 +261,3 @@ document.getElementById("code").append(div2, div3);
 };
 
 displayCart(cartproduct);
-

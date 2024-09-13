@@ -63,43 +63,46 @@ const UIProducts = (data) => {
 };
 UIProducts(products);
 
+let filteredProducts = [...products]; 
 const handlesort = (orderby) => {
   if (orderby === "lth") {
-    let store = products.sort((a, b) => a.price - b.price);
+    let store = filteredProducts.sort((a, b) => a.price - b.price);
     UIProducts(store);
   } else if (orderby === "htl") {
-    let store = products.sort((a, b) => b.price - a.price);
+    let store = filteredProducts.sort((a, b) => b.price - a.price);
     UIProducts(store);
   }
 };
 
 const handleCategory = (category) => {
   if (category === "all") {
-    UIProducts(products);
+    filteredProducts = [...products]; 
   } else {
-    let store = products.filter(
+    filteredProducts = products.filter(
       (ele) => ele.category.toLowerCase() === category.toLowerCase()
     );
-    UIProducts(store);
   }
+  UIProducts(filteredProducts);
 };
 
 document.getElementById("sort").addEventListener("change", (e) => {
   handlesort(e.target.value);
 });
+
 document.querySelector(".filter-section").addEventListener("change", (e) => {
   if (e.target.name === "category" && e.target.type === "radio") {
     handleCategory(e.target.value);
   }
 });
+
 const search = (e) => {
   e.preventDefault();
 
   let searchValue = document.getElementById("search-input").value;
-  let temp = products.filter((ele) =>
+  filteredProducts = products.filter((ele) =>
     ele.title.toLowerCase().includes(searchValue.toLowerCase())
   );
-  UIProducts(temp);
+  UIProducts(filteredProducts);
 };
 
 document.getElementById("search-icon").addEventListener("click", search);

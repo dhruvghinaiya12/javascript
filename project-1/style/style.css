@@ -319,7 +319,7 @@ background-color: #e65b2e;
   margin-top: 16rem;
 }
 .ftr-cart{
-  margin-top: 18rem;
+  margin-top: 14rem;
 }
 
 .Cart-Summary {
@@ -380,5 +380,53 @@ background-color: #e65b2e;
   &:hover {
     background-color: #fcb08cab;
   }
+}
+.promo-code,.promo-code1 {
+  margin-bottom: 20px;
+  color: #fcb08c;
+  cursor: pointer;
+}
+
+.promo-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.promo-input {
+  border: 1px solid #00000029;
+  color: #2f2e2e;
+  padding: 8px 12px;
+  margin-top: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+.apply-button {
+  background-color: transparent;
+  color: #fcb08c;
+  border: 1px solid #fcb08c;
+  padding: 8px 30px;
+  margin-top: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.fa-tag {
+  color: #fcb08c;
+  font-size: 20px;
+}
+.fa-info-circle {
+  color: #fcb08c;
+  font-size: 20px;
+}
+
+.promo-code1 textarea {
+  border: 1px solid #00000029;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+  width: 350px;
+  height: 92px;
+  resize: none;
 }
 
