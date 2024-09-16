@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#UserData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input , select{
+    width: 20%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #000;
+    
+}
+
+#submit{
+    width: 10%;
+    padding: 5px 10px;
+    background-color: #afa84c;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
