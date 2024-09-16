@@ -63,7 +63,7 @@ const UIProducts = (data) => {
 };
 UIProducts(products);
 
-let filteredProducts = [...products]; 
+let filteredProducts = [...products];
 const handlesort = (orderby) => {
   if (orderby === "lth") {
     let store = filteredProducts.sort((a, b) => a.price - b.price);
@@ -76,7 +76,7 @@ const handlesort = (orderby) => {
 
 const handleCategory = (category) => {
   if (category === "all") {
-    filteredProducts = [...products]; 
+    filteredProducts = [...products];
   } else {
     filteredProducts = products.filter(
       (ele) => ele.category.toLowerCase() === category.toLowerCase()

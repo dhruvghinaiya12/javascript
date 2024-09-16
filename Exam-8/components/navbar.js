@@ -7,9 +7,9 @@ export const navbar=()=>{
                   </button>
             
                   <div class="collapse navbar-collapse justify-content-center" id="navbarButtons">
-                    <div class="d-flex mx-auto">
+                    <div class="d-flex mx-auto gap-3">
                      <a href="/Exam-8/index.html"><button class="btn btn-primary me-2" id="home" type="button">HOME</button></a> 
-                     <a href="/Exam-8/student.html"> <button class="btn btn-secondary" id="addData" type="button">ADD DATA</button></a>
+                     <a href="/Exam-8/student.html"> <button class="btn btn-secondary" id="addData" type="button">STUDENT DATA</button></a>
                     </div>
                   </div>
                 </div>

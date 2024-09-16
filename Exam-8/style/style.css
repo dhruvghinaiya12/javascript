@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.message {
+  margin-top: 10rem;
+}
+.no-products-message {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f4f4f4;
+  max-width: 500px;
+}
+
+.no-products {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+
+.add-product-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.2s ease;
+  &:hover {
+    background: #0056b3;
+  }
+}
+#filter {
+  padding: 15px;
+  background: linear-gradient(135deg, #e3e3e3, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  max-width: 850px;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#filter input[type="search"] {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  width: 220px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+  &:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+}
+
+#filter button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    background-color: #388e3c;
+    box-shadow: 0 4px 8px rgba(56, 142, 60, 0.3);
+  }
+}
+#filter select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+  &:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+}
+
+.Cart-Header {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 1fr;
+  align-items: center;
+  border: 1px solid #ddd;
+  justify-items: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px 2.4px;
+}
+#studentData {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.main-div {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid #ddd;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px 2.4px;
+}
+
+.main-div h1 {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.main-div p {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}

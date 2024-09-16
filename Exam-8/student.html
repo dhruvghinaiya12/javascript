@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>student portal</title>
+    <link rel="stylesheet" href="./style/style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -20,16 +21,33 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid">
-        <div id="navbar">
-           
-        </div>
+      <div id="navbar"></div>
     </div>
     <div class="container">
-        <div id="studentData"></div>
+      <div id="msg" class="text-center mt-5"></div>
+      <div id="filter" class="d-flex justify-content-center">
+        <input type="search" id="searching" placeholder="Find Student.."/>
+        <button id="Search" type="button"><i class="fas fa-search"></i></button>
+        <select id="sorting">
+          <option selected disabled>Sort By</option>
+          <option value="lth">low to high</option>
+          <option value="htl">high to low</option>
+        </select>
+        <select id="filtering">
+          <option selected disabled>course</option>
+          <option value="all">All courses</option>
+          <option value="fullstack">fullstack</option>
+          <option value="frontend">frontend</option>
+          <option value="backend">backend</option>
+          <option value="uiux">uiux</option>
+        </select>
+      </div>
+      <div id="label"></div>
+      <div id="studentData"></div>
     </div>
-</body>
-<script type="module" src="./student.js"></script>
+  </body>
+  <script type="module" src="./student.js"></script>
 </html>
