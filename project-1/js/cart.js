@@ -6,7 +6,6 @@ import handleLogout, { createTag } from "../components/helper.js";
 handleLogout();
 
 let cartproduct = JSON.parse(localStorage.getItem("cartproduct")) || [];
-let isTopggle = false;
 const displayCart = (cartproduct) => {
   document.getElementById("cartItems").innerHTML = "";
   document.getElementById("empty").innerHTML = "";
@@ -257,7 +256,21 @@ const displayCart = (cartproduct) => {
       checkoutBtn
     );
     document.getElementById("checkout").append(div);
+    const handlepromocode = (totalWithGst) => {
+      let promoCode = document.querySelector(".promo-input").value;
+      if (promoCode === "SAVE20") {
+        alert("Promo code applied successfully!");
+        let discount = 0.2;
+        totalWithGst = totalWithGst - totalWithGst * discount;
+        document.querySelector(".total .value").innerText = `$${totalWithGst.toFixed(2)}`;
+      } else {
+        alert("Invalid promo code!");
+      }
+    };
+  
+    document.querySelector(".apply-button").addEventListener("click",()=> handlepromocode(totalWithGst));
   }
+ 
 };
 
 displayCart(cartproduct);
