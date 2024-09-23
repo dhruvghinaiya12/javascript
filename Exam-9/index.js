@@ -1,8 +1,9 @@
+let productData;
 const data = async () => {
     let request = await fetch("https://dummyjson.com/products");
     let response = await request.json();
     product(response)
-    window.productData = response;
+    productData = response;
   };
   
   data();
@@ -53,7 +54,7 @@ const data = async () => {
 
   const searching = () => {
     let searchValue = document.getElementById("searching").value.toLowerCase(); 
-    let filteredData = window.productData.products.filter((ele) => 
+    let filteredData = productData.products.filter((ele) => 
       ele.title.toLowerCase().includes(searchValue)
     );
     product({products:filteredData}); 
@@ -62,11 +63,11 @@ const data = async () => {
   document.getElementById("search").addEventListener("click", searching); 
   const sorting = (order) =>{
     if(order == "lth"){
-      let sortedData = window.productData.products.sort((a, b) => a.price - b.price);
+      let sortedData = productData.products.sort((a, b) => a.price - b.price);
       product({products:sortedData});
     }
     else{
-      let sortedData = window.productData.products.sort((a, b) => b.price - a.price);
+      let sortedData = productData.products.sort((a, b) => b.price - a.price);
       product({products:sortedData});
     }
    
@@ -78,10 +79,10 @@ const data = async () => {
 
  const filterByCategory = (category) => {
    if(category === "all"){
-     product(window.productData);
+     product(productData);
    }
    else{
-     let filteredData = window.productData.products.filter((ele) => ele.category === category);
+     let filteredData = productData.products.filter((ele) => ele.category === category);
      product({products:filteredData});
    }
  }
