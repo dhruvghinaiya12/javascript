@@ -2,6 +2,7 @@ const data = async () => {
     let request = await fetch("https://dummyjson.com/products");
     let response = await request.json();
     product(response)
+    window.productData = response;
   };
   
   data();
@@ -50,4 +51,13 @@ const data = async () => {
   })
   };
 
+  const searching = () => {
+    let searchValue = document.getElementById("searching").value.toLowerCase(); 
+    let filteredData = window.productData.filter((ele) => 
+      ele.title.toLowerCase().includes(searchValue)
+    );
+    product(filteredData); 
+  };
+  
+  document.getElementById("search").addEventListener("click", searching); 
   
