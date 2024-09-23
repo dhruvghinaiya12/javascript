@@ -53,11 +53,38 @@ const data = async () => {
 
   const searching = () => {
     let searchValue = document.getElementById("searching").value.toLowerCase(); 
-    let filteredData = window.productData.filter((ele) => 
+    let filteredData = window.productData.products.filter((ele) => 
       ele.title.toLowerCase().includes(searchValue)
     );
-    product(filteredData); 
+    product({products:filteredData}); 
   };
   
   document.getElementById("search").addEventListener("click", searching); 
-  
+  const sorting = (order) =>{
+    if(order == "lth"){
+      let sortedData = window.productData.products.sort((a, b) => a.price - b.price);
+      product({products:sortedData});
+    }
+    else{
+      let sortedData = window.productData.products.sort((a, b) => b.price - a.price);
+      product({products:sortedData});
+    }
+   
+  }
+  document.getElementById("sort-select").addEventListener("change", (e) => {
+    sorting(e.target.value);
+  });
+
+
+ const filterByCategory = (category) => {
+   if(category === "all"){
+     product(window.productData);
+   }
+   else{
+     let filteredData = window.productData.products.filter((ele) => ele.category === category);
+     product({products:filteredData});
+   }
+ }
+ document.getElementById("filter").addEventListener("change", (e) => {
+   filterByCategory(e.target.value);
+ });
