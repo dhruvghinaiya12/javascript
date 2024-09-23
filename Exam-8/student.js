@@ -100,4 +100,4 @@ const search = (e) => {
   );
   Studentdata(filterStudents);
 };
-document.getElementById("Search").addEventListener("click", search);
+document.getElementById("search").addEventListener("click", search);
