@@ -2,20 +2,20 @@ let productData;
 const data = async () => {
     let request = await fetch("https://dummyjson.com/products");
     let response = await request.json();
-    product(response)
-    productData = response;
+    product(response.products)
+    productData = response.products;
   };
   
   data();
-  const product = (data) => {
+  const product = (products) => {
     document.getElementById("product").innerHTML = "";
-  data.products.map((item) => {
+  products.map((item) => {
 
     let div= document.createElement("div");
     div.className="main-product";
 
     let id= document.createElement("h3")
-    id.innerHTML=item.id;
+    id.innerHTML=`product id: ${item.id}`;
 
     let img= document.createElement("img")
     img.src=item.images;
@@ -46,7 +46,6 @@ const data = async () => {
       rating.innerHTML="⭐⭐";
     }
 
-
     div.append(img,id,title,description,price,category,rating);
     document.getElementById("product").append(div);
   })
@@ -63,12 +62,12 @@ const data = async () => {
   document.getElementById("search").addEventListener("click", searching); 
   const sorting = (order) =>{
     if(order == "lth"){
-      let sortedData = productData.products.sort((a, b) => a.price - b.price);
-      product({products:sortedData});
+      let sortedData = productData.sort((a, b) => a.price - b.price);
+      product(sortedData);
     }
     else{
-      let sortedData = productData.products.sort((a, b) => b.price - a.price);
-      product({products:sortedData});
+      let sortedData = productData.sort((a, b) => b.price - a.price);
+      product(sortedData);
     }
    
   }
@@ -82,8 +81,8 @@ const data = async () => {
      product(productData);
    }
    else{
-     let filteredData = productData.products.filter((ele) => ele.category === category);
-     product({products:filteredData});
+     let filteredData = productData.filter((ele) => ele.category === category);
+     product(filteredData);
    }
  }
  document.getElementById("filter").addEventListener("change", (e) => {

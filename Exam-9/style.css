@@ -19,7 +19,7 @@
     gap: 20px;
     align-items: center;
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     opacity: 0; 
     animation: fadeIn 1s ease-in forwards; 
 }
@@ -42,7 +42,40 @@
     font-size: 16px;
     color: #55555594;
 }
-
+#main-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin: 20px 0;
+    justify-content: center;
+  }
+  
+  #main-1 select,
+  #main-1 input[type="text"],
+  #main-1 button {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #main-1 select {
+    width: 150px;
+  }
+  
+  
+  #main-1 button {
+    background-color: #bb3b3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #main-1 button:hover {
+    background-color: #bb3b3bd9;
+    transition: background-color 0.3s ease;
+  }
+  
 @keyframes fadeIn {
     0% {
       opacity: 0;

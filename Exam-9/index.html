@@ -14,19 +14,22 @@
     />
   </head>
   <body>
-    <select id="sort-select">
-      <option value="" selected disabled>sort by</option>
-      <option value="htl">High to Low</option>
-      <option value="lth">Low to High</option>
-    </select>
-    <input type="text" id="searching" placeholder="Search..." />
-    <button id="search">search</button>
-    <select id="filter">
-      <option value="" selected disabled>Filter by Category</option>
-      <option value="groceries">groceries</option>
-      <option value="beauty">beauty</option>
-      <option value="furniture">furniture</option>
-    </select>
+    <div id="main-1">
+      <select id="sort-select">
+        <option value="" selected disabled>sort by</option>
+        <option value="htl">High to Low</option>
+        <option value="lth">Low to High</option>
+      </select>
+      <input type="text" id="searching" placeholder="Search..." />
+      <button id="search">search</button>
+      <select id="filter">
+        <option value="" selected disabled>Filter by Category</option>
+        <option value="all">all</option>
+        <option value="groceries">groceries</option>
+        <option value="beauty">beauty</option>
+        <option value="furniture">furniture</option>
+      </select>
+    </div>
     <div id="product"></div>
   </body>
   <script src="./index.js"></script>
