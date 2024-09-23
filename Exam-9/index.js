@@ -53,10 +53,10 @@ const data = async () => {
 
   const searching = () => {
     let searchValue = document.getElementById("searching").value.toLowerCase(); 
-    let filteredData = productData.products.filter((ele) => 
+    let filteredData = productData.filter((ele) => 
       ele.title.toLowerCase().includes(searchValue)
     );
-    product({products:filteredData}); 
+    product(filteredData); 
   };
   
   document.getElementById("search").addEventListener("click", searching); 
