@@ -17,7 +17,7 @@ const Studentdata = (student) => {
     </div>
     `;
   } else {
-    let label = document.createElement("div", "");
+    let label = document.createElement("div");
     label.className = "Cart-Header";
     let labelproduct = document.createElement("h3");
     labelproduct.innerHTML = "Student name";
@@ -38,6 +38,7 @@ const Studentdata = (student) => {
       labelAmount
     );
     document.getElementById("studentData").append(label);
+    
     student.map((ele) => {
       let div = document.createElement("div");
       div.className = "main-div";

@@ -137,7 +137,7 @@ const displayCart = (cartproduct) => {
     div2.append(codeIcon, promoCode, inputBox, applyButton);
 
     let div3 = createTag("div", "");
-    div3.className="promo-code1"
+    div3.className = "promo-code1";
     let note = createTag("span", "Add a note");
     note.className = "promo-text";
     let noteIcon = createTag("i", "");
@@ -256,21 +256,39 @@ const displayCart = (cartproduct) => {
       checkoutBtn
     );
     document.getElementById("checkout").append(div);
-    const handlepromocode = (totalWithGst) => {
-      let promoCode = document.querySelector(".promo-input").value;
-      if (promoCode === "SAVE20") {
-        alert("Promo code applied successfully!");
-        let discount = 0.2;
-        totalWithGst = totalWithGst - totalWithGst * discount;
-        document.querySelector(".total .value").innerText = `$${totalWithGst.toFixed(2)}`;
-      } else {
-        alert("Invalid promo code!");
-      }
-    };
-  
-    document.querySelector(".apply-button").addEventListener("click",()=> handlepromocode(totalWithGst));
+
+    /*------------------------------------------promo-code-logic------------------------------------------*/
+//     const handlepromocode = (totalWithGst) => {
+//       let promoCode = document.querySelector(".promo-input").value;
+//       let promo = localStorage.getItem("promoCode");
+//       if(promoCode.length > 0){
+//         localStorage.setItem("promoCode", promoCode);
+
+//       }
+
+//       if (promoCode === "SAVE20" || promo == "SAVE20") {
+//         alert("Promo code applied successfully!");
+//         let discount = 0.2;
+//         totalWithGst = totalWithGst - totalWithGst * discount;
+//         document.querySelector(
+//           ".total .value"
+//         ).innerText = `$${totalWithGst.toFixed(2)}`;
+//       } else {
+//         alert("Invalid promo code!");
+//       }
+//     };
+
+//     document
+//       .querySelector(".apply-button")
+//       .addEventListener("click", () => handlepromocode(totalWithGst));
+//       let promo = localStorage.getItem("promoCode");
+//     if (promo) {
+//       handlepromocode(totalWithGst);
+//       document.querySelector(".promo-input").value=promo
+//     }
   }
- 
 };
 
 displayCart(cartproduct);
+
+

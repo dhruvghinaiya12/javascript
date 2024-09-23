@@ -1,62 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-            margin: 0;
-            text-align: center;
-        }
+      html,
+      body {
+        height: 100%; 
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
 
-        a {
-            display: inline-block;
-            text-decoration: none;
-            color: #ffffff;
-            background: #3498db;
-            padding: 10px 20px;
-            border-radius: 8px;
-            margin: 10px;
-            font-size: 18px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #333333;
+      }
 
-        a:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
-        }
+      h2 {
+        font-size: 26px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        display: block;
+        padding-bottom: 5px;
+        width: 150px;
+        margin: 0 auto 15px auto;
+        text-align: center;
+      }
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333333;
-        }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .partition {
+        flex: 1;
+        margin: 20px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        min-width: 300px;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #ffffff;
+        background: #3498db;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      a:hover {
+        background-color: #2980b9;
+        transform: scale(1.05);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Links to Projects</h1>
-    <a href="./pr-9/index.html" target="_blank">Practical-9</a>
-    <a href="./pr-11/index.html" target="_blank">Pr-11</a>
-    <a href="./exam-4/index.html" target="_blank">Exam-4</a>
-    <a href="./pr-12/index.html" target="_blank">Pr-12</a>
-    <a href="./extra-1/index.html" target="_blank">Extra-1</a>
-    <a href="./extra-2/index.html" target="_blank">Extra-2</a>
-    <a href="./extra-3/index.html" target="_blank">Extra-3</a>
-    <a href="./pr-14/index.html" target="_blank">Digital Clock</a>
-    <a href="./pr-15/index.html" target="_blank">Counter</a>
-    <a href="./pr-16/index.html" target="_blank">Dice</a>
-    <a href="./pr-17/index.html" target="_blank">post</a>
-    <a href="./Exam-7/index.html" target="_blank">news app</a>
-    <a href="./project-1/index.html" target="_blank">project-1</a>
-    <a href="./Exam-8/index.html" target="_blank">Exam-8</a>
 
-</body>
+    <div class="container">
+      <!-- Practical Section -->
+      <div class="partition">
+        <h2>Practicals</h2>
+        <a href="./pr-9/index.html" target="_blank">Practical-9</a>
+        <a href="./pr-11/index.html" target="_blank">Practical-11</a>
+        <a href="./pr-12/index.html" target="_blank">Practical-12</a>
+        <a href="./extra-1/index.html" target="_blank">Extra-1</a>
+        <a href="./extra-2/index.html" target="_blank">Extra-2</a>
+        <a href="./extra-3/index.html" target="_blank">Extra-3</a>
+        <a href="./pr-14/index.html" target="_blank">Digital Clock</a>
+        <a href="./pr-15/index.html" target="_blank">Counter</a>
+        <a href="./pr-16/index.html" target="_blank">Dice</a>
+        <a href="./pr-17/index.html" target="_blank">Post</a>
+      </div>
+
+      <!-- Exam Section -->
+      <div class="partition">
+        <h2>Exams</h2>
+        <a href="./exam-4/index.html" target="_blank">Exam-4</a>
+        <a href="./Exam-7/index.html" target="_blank">News App</a>
+        <a href="./Exam-8/index.html" target="_blank">Exam-8</a>
+      </div>
+
+      <!-- Project Section -->
+      <div class="partition">
+        <h2>Projects</h2>
+
+        <a href="./project-1/index.html" target="_blank">Project-1</a>
+      </div>
+    </div>
+  </body>
 </html>
