@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.main {
+  background: url(./img/Untitled.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(150px);
+  color: white;
+}
+
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+  flex-direction: column;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.left-section {
+  align-items: flex-start;
+}
+
+.center-section {
+  align-items: center;
+}
+
+.right-section {
+  align-items: flex-end;
+}
+
+.time-main {
+  display: flex;
+  gap: 10px;
+}
+
+#weather-icon {
+  width: 111px;
+}
+.center-main-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+#temperature {
+  font-size: 5.5em;
+  line-height: 0.7;
+}
+.degree {
+  font-size: 0.35em;
+  vertical-align: top;
+  margin: 0 4px;
+  cursor: pointer;
+}
+#description {
+  font-size: 24px;
+  margin: 10px 0 0 10px;
+}
+#city {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+#date,
+#time,
+#ampm,
+.right-section div {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
