@@ -18,7 +18,7 @@ const data = async () => {
     id.innerHTML=`product id: ${item.id}`;
 
     let img= document.createElement("img")
-    img.src=item.images;
+    img.src=item.images[0];
 
     let title= document.createElement("h3")
     title.innerHTML=item.title;
