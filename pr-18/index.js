@@ -6,11 +6,12 @@ const weather = async () => {
 };
 
 weather();
-
+let unitToggle
 const displayWeather = (data) => {
   document.getElementById("city").innerHTML = data.name + ", IN";
 
-  document.getElementById("temperature").innerHTML = `${Math.round(data.main.temp)}<span class="degree">°C</span><span class="degree">|</span><span class="degree-f">°F</span>`;
+  unitToggle=Math.round(data.main.temp)
+  document.getElementById("temperature").innerHTML = `${unitToggle}<span class="degree">°C</span><span class="degree">|</span><span class="degree-f">°F</span>`;
 
   document.getElementById("description").innerHTML= data.weather[0].description;
   
@@ -23,8 +24,21 @@ const displayWeather = (data) => {
   document.getElementById("high").innerHTML = `High: ${Math.round(data.main.temp_max)}°C`;
  
   document.getElementById("low").innerHTML = `Low: ${Math.round(data.main.temp_min )}°C`;
+
+  document.querySelector(".degree-f").addEventListener("click", Fahrenheit);
+  document.querySelector(".degree").addEventListener("click", Celsius);
 };
 
+// °F = °C × (9/5) + 32
+
+const Fahrenheit=()=>{
+  let fahrenheit=unitToggle*(9/5)+32
+  document.querySelector(".degree-f").innerHTML = `${Math.round(fahrenheit)}°F`;
+}
+const Celsius=()=>{
+  let celsius=unitToggle
+  document.querySelector(".degree").innerHTML = `${Math.round(celsius)}°C`;
+}
 const clock = () => {
     const date = new Date();
     let hours = date.getHours();
@@ -72,4 +86,4 @@ clock();
 setInterval(clock, 1000);
 
 
-// °F = °C × (9/5) + 32
+
