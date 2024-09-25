@@ -10,7 +10,7 @@ weather();
 const displayWeather = (data) => {
   document.getElementById("city").innerHTML = data.name + ", IN";
 
-  document.getElementById("temperature").innerHTML = `${Math.round(data.main.temp)}<span class="degree">°C</span><span class="degree">|</span><span class="degree">°F</span>`;
+  document.getElementById("temperature").innerHTML = `${Math.round(data.main.temp)}<span class="degree">°C</span><span class="degree">|</span><span class="degree-f">°F</span>`;
 
   document.getElementById("description").innerHTML= data.weather[0].description;
   
@@ -70,3 +70,6 @@ const clock = () => {
 
 clock();
 setInterval(clock, 1000);
+
+
+// °F = °C × (9/5) + 32
