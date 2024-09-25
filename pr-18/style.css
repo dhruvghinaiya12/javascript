@@ -10,10 +10,14 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.handlediv{
+  display: none;
+}
 #weather {
   display: flex;
   justify-content: space-between;
@@ -21,7 +25,7 @@
   width: 900px;
   padding: 30px;
   border-radius: 10px;
-  backdrop-filter: blur(150px);
+  backdrop-filter: blur(70px);
   color: white;
 }
 
@@ -81,6 +85,9 @@
   font-weight: 700;
   line-height: 1.1;
 }
+.country{
+  margin-left: 5px;
+}
 #date,
 #time,
 #ampm,
@@ -90,3 +97,36 @@
   font-weight: 700;
   line-height: 1.1;
 }
+.degree.active {
+  color: #02ccfe; 
+}
+
+.degree-f.active {
+  color: #02ccfe; 
+}
+
+input[type="text"] {
+  width: 550px;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  color: #000000;
+}
+
+#submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #278db5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #6EC6E4;
+  }
+}
+
