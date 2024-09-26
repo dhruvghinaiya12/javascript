@@ -3,7 +3,6 @@ const handleCityWeather = () => {
   const cityName = document.getElementById('city-input').value.trim();
   if (cityName) {
     weather(cityName);
-    document.querySelector(".handlediv").style.display = 'block';
   } else {
     alert("Please enter a city name");
   }
@@ -12,7 +11,7 @@ const handleCityWeather = () => {
 document.getElementById('submit-btn').addEventListener('click', handleCityWeather);
 
 
-const weather = async (cityName) => {
+const weather = async (cityName="surat") => {
   let request = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=b73378fd20b41837f81c33ea65589084&units=metric`);
   let response = await request.json();
   displayWeather(response);
@@ -118,3 +117,4 @@ const clock = () => {
 
 clock();
 setInterval(clock, 1000);
+weather()

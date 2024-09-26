@@ -15,9 +15,9 @@
   justify-content: center;
 }
 
-.handlediv{
+/* .handlediv{
   display: none;
-}
+} */
 #weather {
   display: flex;
   justify-content: space-between;
