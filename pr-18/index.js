@@ -17,6 +17,16 @@ const weather = async (cityName="surat") => {
   displayWeather(response);
 };
 
+const getLocation = () => {
+  navigator.geolocation.getCurrentPosition(position => {
+      let lat = position.coords.latitude
+      let lon = position.coords.longitude
+      getWeatherByLocation(lat, lon)
+
+  })
+}
+getLocation()
+
 let tempCelsius = null; 
 let tempFahrenheit = null; 
 let unit = 'C';

@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px;
+}
+#formdata {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 0 20px; 
+}
+
+#formdata input,
+#formdata select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; 
+}
+
+
+#formdata button {
+  background: linear-gradient(135deg, #6a5acd, #483d8b);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  &:hover {
+    background: linear-gradient(135deg, #574bbd, #3b3177);
+    transform: scale(1.05); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  }
+}
+
+
+
+#display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 20px;
+}
+
+.main-student {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  margin: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.main-student:hover {
+  transform: scale(1.05);
+}
+.main-student img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+.main-student h1 {
+  font-size: 22px;
+  padding: 10px 0;
+  color: #333333fe;
+}
+.main-student button {
+  background: linear-gradient(135deg, #6a5acd, #483d8b); 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px; 
+  margin: 10px 10px 0 10px;
+  font-size: 16px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  border-radius: 25px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  &:hover {
+    background: linear-gradient(135deg, #574bbd, #3b3177); 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  }
+  &:active {
+  transform: scale(1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+}
+
+
+
+
+

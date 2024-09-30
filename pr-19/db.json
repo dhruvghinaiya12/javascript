@@ -1,0 +1,74 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEzsVm5a2MmiFlLPUdUxZpQq8BO93Rw58iG8EXnxdEw0alReCzzMBt86ejTX5HL7MQZE&usqp=CAU",
+      "name": "danish bhai",
+      "number": "101",
+      "course": "web-development"
+    },
+    {
+      "id": "2",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXK50_He6FefRJX9bL996m2gGhkKsUzWbDnA&s",
+      "name": "deepak kalal",
+      "number": "102",
+      "course": "mobile-app"
+    },
+    {
+      "id": "3",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3swpk1UfV0axT9eNyELJ0JyhruaB9WaWTog&s",
+      "name": "kim kardashian",
+      "number": "103",
+      "course": "cybersecurity"
+    },
+    {
+      "id": "4",
+      "img": "https://external-preview.redd.it/raja-gujjar-chappal-marungo-adidas-ki-hai-4000-rupaya-ki-v0-eTkzbXMzanl4cXBkMXDm0EAgi4b42V9YPjkMdyMDIcPy8vk2XLv68dEKul_z.png?format=pjpg&auto=webp&s=b79edca8439acb15b6be6bd93d44ef56d2961f72",
+      "name": "Raja gujjar",
+      "number": "104",
+      "course": "data-science"
+    },
+    {
+      "id": "5",
+      "img": "https://yt3.googleusercontent.com/pB3a6M5YMqX_syIfE7OuH-CW3oIa3f4UCZQ-GLDeScKLN-NyDn8ReKYTRrpvNMNncEali4LFAw=s160-c-k-c0x00ffffff-no-rj",
+      "name": "arvind mera sathi",
+      "number": "105",
+      "course": "data-science"
+    },
+    {
+      "id": "6",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5nJ7UL6uk30WzXySGmp_CcKHV_kPzf7Gew&s",
+      "name": "vijubaa",
+      "number": "106",
+      "course": "web-development"
+    },
+    {
+      "id": "7",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7NjbW-m7CgT8Vu8i2ygQil7P176OvBvQ1w&s",
+      "name": "mithu don 🏳️‍🌈",
+      "number": "107",
+      "course": "mobile-app"
+    },
+    {
+      "id": "8",
+      "img": "https://lokpatrika.in/wp-content/uploads/2023/12/hansa-ben-2-1024x768.jpg",
+      "name": "hansaben",
+      "number": "108",
+      "course": "data-science"
+    },
+    {
+      "id": "9",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5a1cz0f8VSGYxRUezjSB7FGoP3r9idEAP5w&s",
+      "name": "salmon bhoi",
+      "number": "109",
+      "course": "cybersecurity"
+    },
+    {
+      "id": "10",
+      "img": "https://m.economictimes.com/thumb/height-450,width-600,imgsize-44062,msid-113798498/lawrence-bishnoi.jpg",
+      "name": "Badmos",
+      "number": "110",
+      "course": "mobile-app"
+    }
+  ]
+}
