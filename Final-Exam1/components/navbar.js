@@ -9,7 +9,7 @@ export const navbar=()=>{
                   <div class="collapse navbar-collapse justify-content-center" id="navbarButtons">
                     <div class="d-flex mx-auto gap-3">
                      <a href="/Final-Exam1/index.html"><button class="btn btn-primary me-2" id="home" type="button">HOME</button></a> 
-                     <a href="/Final-Exam1/add.html"> <button class="btn btn-secondary" id="addData" type="button">STUDENT DATA</button></a>
+                     <a href="/Final-Exam1/add.html"> <button class="btn btn-secondary" id="addData" type="button">ADD Questions</button></a>
                     </div>
                   </div>
                 </div>
@@ -19,12 +19,12 @@ export const navbar=()=>{
 
 const ApiMethods = {
   get: async () => {
-      let request = await fetch(`http://localhost:3000/ data`);
+      let request = await fetch(`https://server-6mw5.onrender.com/data`);
       let response = await request.json();
       return response;
   },
   post: async (students) => {
-      let request = await fetch(`http://localhost:3000/ data`, {
+      let request = await fetch(`https://server-6mw5.onrender.com/data`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

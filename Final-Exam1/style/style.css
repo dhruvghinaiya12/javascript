@@ -1,0 +1,67 @@
+
+.main-data {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .mcq-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .mcq-form p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent; 
+    padding: 10px;
+    border-radius: 5px; 
+    margin-bottom: 5px; 
+    transition: border-color 0.3s ease; 
+  }
+  .option input[type="radio"] {
+    margin-right: 10px;
+  }
+  .option span {
+    font-size: 14px;
+  }
+  .correct {
+    border-color: #4caf50; 
+    background-color: rgba(0, 255, 0, 0.1); 
+  }
+  
+  .incorrect {
+    border-color: #f44336;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  
+  #result {
+    background-color: #282c34cc; 
+    color: #fcb08c;
+    padding: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
+    margin-top: 20px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    display: none;
+  }
+  
+  #result h1 {
+    margin: 10px 0;
+    font-size: 24px; 
+  }
+  
+  #correct {
+    color: #4caf50; 
+  }
+  
+  #wrong {
+    color: #f44336; 
+  }
+  
