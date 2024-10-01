@@ -30,21 +30,24 @@ const content = async () => {
           <input type="radio" name="question${index}" value="${item.option4}">
           <span>D. ${item.option4}</span>
         </div>
+         <h5 id="Result-${index}" class="Result"></h5>
       </form>`;
 
     document.getElementById("mcq").append(div);
-
-    let options = div.querySelectorAll('input[type="radio"]');
+9
+    let options = div.querySelectorAll(`input[type="radio"]`);
     options.forEach((option) => { 
       option.addEventListener("change", () => {
         document.getElementById("result").style.display ="block";
         options.forEach((opt) => (opt.disabled = true));
         if (option.value === item.answer) {
           document.getElementById("correct").innerHTML = `correct answer: ${++correctCount}`;
-          option.parentElement.classList.add("correct");
-        } else {
+          document.getElementById(`Result-${index}`).innerHTML = `<span class="correct-ans"><i class="fa-solid fa-check"></i> Well done! Your answer is correct!<span>`;
+          document.getElementById(`Result-${index}`).classList.add('correct-message');   
+      } else {
           document.getElementById("wrong").innerHTML = `wrong answer: ${++incorrectCount}`;
-          option.parentElement.classList.add("incorrect");
+          document.getElementById(`Result-${index}`).innerHTML = `<span class="wrong-ans"><i class="fa-solid fa-xmark"></i> Oops! That's not the right answer.<span>`;
+          document.getElementById(`Result-${index}`).classList.add('incorrect-message');
         }
       });
     });

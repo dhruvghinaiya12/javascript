@@ -65,3 +65,19 @@
     color: #f44336; 
   }
   
+  .Result{
+    font-size: 16px; 
+    margin: 8px 0; 
+    border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+  }
+  
+
+  .correct-ans{
+    color: #4caf50;
+
+  }
+  .wrong-ans{
+    color: #f44336;
+  }
