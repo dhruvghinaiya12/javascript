@@ -1,0 +1,40 @@
+{
+  " data": [
+    {
+      "id": "5f1b",
+      "question": "What does API stand for?",
+      "option1": "Application Process Interface",
+      "option2": "Application Programming Interface",
+      "option3": "Automated Programming Interface",
+      "option4": "Advanced Programming Input",
+      "answer": "Application Programming Interface"
+    },
+    {
+      "id": "17c6",
+      "question": "Which type of API allows different software applications to communicate over the web?",
+      "option1": "Web API",
+      "option2": "Desktop API",
+      "option3": "Mobile API",
+      "option4": "Hardware API",
+      "answer": "Web API"
+    },
+    {
+      "id": "a7b6",
+      "question": "What is the common format used to send and receive data in APIs",
+      "option1": "HTML",
+      "option2": "JSON",
+      "option3": "CSS",
+      "option4": "XML",
+      "answer": "JSON"
+    },
+    {
+      "id": "7d30",
+      "question": "Which HTTP method is typically used to retrieve data from a server?",
+      "option1": "POST",
+      "option2": "GET",
+      "option3": "DELETE",
+      "option4": "PUT",
+      "answer": "GET"
+    }
+  ]
+}
