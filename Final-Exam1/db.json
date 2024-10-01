@@ -35,6 +35,15 @@
       "option3": "DELETE",
       "option4": "PUT",
       "answer": "GET"
+    },
+    {
+      "id": "845a",
+      "question": "Which HTTP status code represents a successful API request?",
+      "option1": "404",
+      "option2": "500",
+      "option3": "200",
+      "option4": "403",
+      "answer": "200"
     }
   ]
 }
