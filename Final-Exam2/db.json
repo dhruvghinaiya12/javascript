@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": "9f6d",
+      "image": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW16TLT?ver=99ac&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&f=jpg&o=f&p=140&aim=true",
+      "name": "laptop",
+      "price": "50000",
+      "category": "Electronics"
+    },
+    {
+      "id": "5b43",
+      "image": "https://img.etimg.com/photo/msid-101297708,imgsize-47426/SamsungGalaxyS23Ultra5G.jpg",
+      "name": "mobile",
+      "price": "100000",
+      "category": "Electronics"
+    },
+    {
+      "id": "6a8f",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCRjxVZsVujyu2uv5-6UBYY-yH9xa1BrzpQ&s",
+      "name": "fruits",
+      "price": "200",
+      "category": "groceries"
+    },
+    {
+      "id": "eb77",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVU1ne0ThYY7sT5PkP_HJ0dRIJ4lGOTnqQXQ&s",
+      "name": "car",
+      "price": "400000",
+      "category": "vehicles"
+    },
+    {
+      "id": "d45b",
+      "image": "https://bd.gaadicdn.com/processedimages/royal-enfield/himalayan-450/source/himalayan-4506565ccada995d.jpg",
+      "name": "bike",
+      "price": "50000",
+      "category": "vehicles"
+    },
+    {
+      "id": "adf6",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i7gT_7Y2hW6LmtlUtmnEgd7lV5ktQKHkNA&s",
+      "name": "phone",
+      "price": "32000",
+      "category": "Electronics"
+    },
+    {
+      "id": "24ad",
+      "image": "https://cdn.dotpe.in/longtail/store-items/7863140/pHInZJjr.jpeg",
+      "name": "fan",
+      "price": "4000",
+      "category": "Electronics"
+    },
+    {
+      "id": "bebb",
+      "image": "https://tiimg.tistatic.com/fp/3/007/550/aashirvaad-whole-wheat-atta-0-maida-100-atta-for-making-fluffy-roti-181.jpg",
+      "name": "wheat",
+      "price": "2000",
+      "category": "groceries"
+    },
+    {
+      "id": "805d",
+      "image": "https://os-wordpress-media.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/11/24212247/Air-Conditioner-Buying-Guide.jpg",
+      "name": "A.C.",
+      "price": "32000",
+      "category": "Electronics"
+    }
+  ]
+}
