@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="userdata" id="mainForm">
+        <input type="text" name="name" id="name" placeholder="Enter your name..."/>
+        <input type="number" name="id" id="studentId" placeholder="Enter your Id..."/>
+        <input type="number" name="number" id="number" placeholder="Enter Phone Number..."/>
+        <fieldset class="gender-selection">
+          <legend>Choose your gender:</legend>
+          <label for="male">Male</label>
+          <input type="radio" class="radio-check" name="gender" id="male" value="male" required/>
+          <label for="female">Female</label>
+          <input type="radio" class="radio-check" name="gender" id="female" value="female" required/>
+          <label for="other">Other</label>
+          <input type="radio" class="radio-check" name="gender" id="other" value="other" required/>
+        </fieldset>
+        <fieldset class="language-selection">
+          <legend>Choose Languages:</legend>
+          <label for="English">English</label>
+          <input type="radio" class="radio-check1" name="language" id="English" value="English" required/>
+          <label for="Hindi">Hindi</label>
+          <input type="radio" class="radio-check1" name="language" id="Hindi" value="Hindi" required/>
+          <label for="Gujarati">Gujarati</label>
+          <input type="radio" class="radio-check1" name="language" id="Gujarati" value="Gujarati" required/>
+        </fieldset>
+        <input type="number" name="age" id="age" placeholder="Enter your Age..."/>
+        <input type="submit" value="Submit" />
+      </form>
+      <button class="records"><a href="https://docs.google.com/spreadsheets/d/1ioCF7K6-GlHNYN7Ah63v8K5qwxZfaNW7bjE_zzjhgwU/edit?gid=0#gid=0" target="_blank">Check all records</a></button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

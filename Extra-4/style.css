@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #686D76;
+  }
+  
+  .container {
+    width: 400px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(100px);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: #333;
+    background-color: #2c3033e9;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="submit"],
+  select {
+    margin-bottom: 10px;
+    padding: 8px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  input:focus{
+    outline: none;
+    border: 1px solid #420072;
+  }
+  
+  input::placeholder {
+    color: #888;
+  }
+  
+  .gender-selection,.language-selection {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #ffffffe6;
+  }
+  
+  .gender-selection legend,.language-selection legend {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .gender-selection label {
+    margin-right: 10px;
+  }
+  
+.radio-check {
+    margin-left: -30px;
+  }
+  .radio-check1{
+    margin-left: -20px;
+  }
+
+  input[type="submit"] {
+    margin-left: 25%;
+    width: 50%;
+    background-color:#F0F3FF;
+    color: #2f3134;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color:#F0F3FF;
+    color: #2f3134;
+    transform: scale(1.05);
+  }
+  .records {
+    padding: 8px;
+    margin: 20px 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 25%;
+    width: 50%;
+    background-color: #F0F3FF;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:hover{
+      background-color: #F0F3FF;
+      transform: scale(1.05);
+    }
+  }
+  .records a{
+    color: #2f3134;
+    text-decoration: none;
+  }
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out; /* Adjust the duration and easing if needed */
+}
