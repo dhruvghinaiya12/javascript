@@ -57,12 +57,17 @@ const handleForm = (e) => {
         .then((finalresponse) => {
             console.log(finalresponse);
             alert("Student Data Uploaded Successfully!");
-            document.getElementById("userdata").reset();
+           form.reset();
             form.classList.remove("shake");
         });
 };
 
 const triggerShake = (form) => {
+    if (navigator.vibrate) {
+        navigator.vibrate(500); 
+    }
+
+    
     form.classList.add("shake");
     setTimeout(() => form.classList.remove("shake"), 500);
 };
