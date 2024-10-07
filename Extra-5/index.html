@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="editor-container">
+        <div class="textareas-container">
+            <div>
+                <label><i class="fa-brands fa-html5"></i> HTML</label>
+                <textarea id="htmlCode"></textarea>
+            </div>
+            <div>
+                <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+                <textarea id="cssCode"></textarea>
+            </div>
+            <div>
+                <label><i class="fa-brands fa-js"></i> JavaScript</label>
+                <textarea id="jsCode"></textarea>
+            </div>
+        </div>
+
+        <div class="output-container">
+            <div class="camera-container">
+                <video id="camera" autoplay></video> 
+            </div>
+            <div class="output-label">
+                <label><i class="fa-solid fa-play"></i> Output</label>
+            </div>
+            <iframe id="output" sandbox="allow-scripts allow-same-origin"></iframe>
+        </div>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
