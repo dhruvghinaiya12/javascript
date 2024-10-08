@@ -1,0 +1,20 @@
+
+.meal {
+  margin-bottom: 30px;
+}
+
+.meal img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.meal h5 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.meal p {
+  margin: 5px 0;
+  font-size: 14px;
+}
