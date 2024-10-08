@@ -30,11 +30,37 @@ checklogin();
 const handleForm = (e) => {
   e.preventDefault();
   let user = {
-    name: document.getElementById("username").value,
+    name: document.getElementById("username").value.trim(),
     id: document.getElementById("userId").value,
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };
+ 
+  let username = /^[A-Z][a-zA-Z0-9]{1,}$/;
+  if (!username.test(user.name)) {
+    alert(
+      "Username should start with a capital letter, contain only letters and digits, and be at least 2 characters long. Spaces are not allowed."
+    );
+    return;
+  }
+  let userId = /^[0-9]{4}$/;
+  if (!userId.test(user.id)) {
+    alert("User ID should be 4 digits long");
+    return;
+  }
+  let Email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!Email.test(user.email)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+  let Password =/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (!Password.test(user.password)) {
+    alert(
+      "Password should be at least 8 characters long and include at least one letter, one number, and one special character."
+    );
+    return;
+  }
+
  users.push(user);
  localStorage.setItem("users", JSON.stringify(users)); 
  alert("Sign up successfully!");
